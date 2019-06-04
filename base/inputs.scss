@@ -324,7 +324,7 @@ input[type=range]:focus::-ms-fill-upper {
 
   input:hover ~ label:before,
   input:focus ~ label:before,
-  input:checked ~ label:before, { // outer circle when hovered, focused, or checked
+  input:checked ~ label:before { // outer circle when hovered, focused, or checked
     border: 1px solid $primary-300;
   }
 
