@@ -2,7 +2,7 @@
   "name": "@wealthbar/peak-base.css",
   "version": "1.0.1",
   "description": "Base styling for Peak Design System",
-  "main": "base/index.css",
+  "main": "index.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
