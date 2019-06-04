@@ -1,6 +1,6 @@
 {
   "name": "@wealthbar/peak-base.css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Base styling for Peak Design System",
   "main": "base/index.css",
   "scripts": {
