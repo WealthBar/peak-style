@@ -1,0 +1,41 @@
+@import url("//hello.myfonts.net/count/32ed97");
+
+@font-face {
+  font-family: 'GT-Walsheim';
+  src:
+    local('GT Walsheim Light'),
+    url('https://s3.amazonaws.com/wealthbar-assets/fonts/gt-walsheim/GT-Walsheim-Light.woff2') format('woff2'),
+    url('https://s3.amazonaws.com/wealthbar-assets/fonts/gt-walsheim/GT-Walsheim-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT-Walsheim';
+  src:
+    local('GT Walsheim Medium'),
+    url('https://s3.amazonaws.com/wealthbar-assets/fonts/gt-walsheim/GT-Walsheim-Medium.woff2') format('woff2'),
+    url('https://s3.amazonaws.com/wealthbar-assets/fonts/gt-walsheim/GT-Walsheim-Medium.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT-Walsheim';
+  src:
+    local('GT Walsheim Light'),
+    url('https://s3.amazonaws.com/wealthbar-assets/fonts/gt-walsheim/GT-Walsheim-Light.woff2') format('woff2'),
+    url('https://s3.amazonaws.com/wealthbar-assets/fonts/gt-walsheim/GT-Walsheim-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT-Walsheim';
+  src:
+    local('GT Walsheim Medium'),
+    url('https://s3.amazonaws.com/wealthbar-assets/fonts/gt-walsheim/GT-Walsheim-Medium.woff2') format('woff2'),
+    url('https://s3.amazonaws.com/wealthbar-assets/fonts/gt-walsheim/GT-Walsheim-Medium.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}

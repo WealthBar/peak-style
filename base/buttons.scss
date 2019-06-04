@@ -1,0 +1,328 @@
+/* --------   Mixins SPECIFICALLY for buttons: keep them LOCALIZED!   -------- */
+
+@mixin fill($default, $active, $hover, $text: white ) {
+  border-color: transparent;
+  color: $text;
+  fill: $text;
+  background: $default;
+
+  &:hover, &:focus {
+    border-color: transparent;
+    color: $text;
+    fill: $text;
+    background: $hover;
+  }
+
+  &:active, &.active {
+    border-color: transparent;
+    color: $text;
+    fill: $text;
+    background: $active;
+  }
+
+  &:disabled, &.disabled {
+    border-color: $neutral-300;
+    color: $neutral-500;
+    font-weight: normal;
+    fill: $neutral-500;
+    background: $neutral-50;
+    outline: none;
+    cursor: default;
+  }
+}
+
+@mixin outline($default, $active, $hover, $text: white ) {
+  border-color: $default;
+  color: $default;
+  fill: $default;
+  background: transparent;
+
+  &:hover, &:focus {
+    border-color: $hover;
+    color: $text;
+    fill: $text;
+    background: $hover;
+  }
+
+  &:active, &.active {
+    border-color: $active;
+    color: $text;
+    fill: $text;
+    background: $active;
+  }
+
+  &:disabled, &.disabled {
+    border-color: $neutral-300;
+    color: $neutral-500;
+    font-weight: normal;
+    fill: $neutral-500;
+    background: $neutral-50;
+    outline: none;
+    cursor: default;
+  }
+}
+
+@mixin flat($default, $active, $hover) {
+  border-color: transparent;
+  color: $default;
+  fill: $default;
+  background: transparent;
+  padding: 0.375rem 0;
+
+  &:hover, &:focus {
+    border-color: transparent;
+    color: $hover;
+    fill: $hover;
+  }
+
+  &:focus {
+    box-shadow: none;
+    background: rgba(128, 128, 128, 0.2);
+  }
+
+  &:active, &.active {
+    border-color: transparent;
+    color: $active;
+    fill: $active;
+    background: transparent;
+  }
+
+  &:disabled, &.disabled {
+    fill: $neutral-500;
+    color: $neutral-500;
+    font-weight: normal;
+    cursor: default;
+    background: transparent;
+    outline: none;
+    border: none;
+  }
+}
+
+/* --------   End Mixins   -------- */
+
+/* --------   BUTTON STYLING   -------- */
+
+a.button,
+span.button,
+label.button,
+button.button,
+button[type="button"],
+button[type="reset"],
+button[type="submit"] {
+  display: inline-block;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+  line-height: 1.125rem;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  white-space: nowrap;
+  transition: all 0.3s ease-out;
+
+  svg {
+    height: 1rem;
+    width: 1rem;
+    flex: 0 0 1rem;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 2px 2px $neutral-500;
+  }
+
+  &::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+
+  &.full { width: 100%; }
+
+  @include fill($primary-500, $primary-700, $primary-900);
+  &.outline { @include outline($primary-500, $primary-700, $primary-500); }
+  &.flat { @include flat($primary-500, $primary-700, $primary-900); }
+
+  // --- BUTTON COLOUR VARIANTS ---//
+
+  // alt colour styling
+  &.alt {
+    @include fill($secondary-500, $secondary-500, $secondary-700);
+    &.outline { @include outline($secondary-500, $secondary-700, $secondary-500); }
+    &.flat { @include flat($secondary-500, $secondary-300, $secondary-700); }
+  }
+
+  &.success {
+    @include fill($neutral-900, $neutral-900, $neutral-900);
+    &.outline { @include fill($neutral-900, $neutral-900, $neutral-900); }
+  }
+
+  // alert colour styling
+
+  &.alert {
+    @include fill($tertiary-100, $tertiary-100, $tertiary-300, $neutral-900);
+
+    &.outline {
+      @include outline($tertiary-300, $tertiary-300, $tertiary-100, $neutral-900);
+
+      color: $neutral-900;
+      fill: $neutral-900;
+    }
+
+    &.flat { @include flat($tertiary-300, $tertiary-300, $tertiary-100); }
+  }
+
+  // neg colour styling
+
+  &.neg {
+    @include fill($neg-500, $neg-500, $neg-700);
+    &.outline { @include outline($neg-500, $neg-700, $neg-500); }
+    &.flat { @include flat($neg-500, $neg-500, $neg-700); }
+  }
+
+  // pos colour styling
+
+  &.pos {
+    @include fill($pos-500, $pos-500, $pos-700);
+    &.outline { @include outline($pos-500, $pos-700, $pos-500); }
+    &.flat { @include flat($pos-500, $pos-500, $pos-700); }
+  }
+
+  &.dark {
+    @include fill($neutral-900, $primary-700, $neutral-700);
+    &.outline { @include outline($neutral-900, $primary-700, $neutral-900); }
+    &.flat { @include flat($neutral-900, $primary-500, $primary-700); }
+  }
+
+  &.light {
+    @include fill($neutral-50, $primary-300, $neutral-300, $black);
+    &.outline { @include outline($neutral-50, $primary-300, $neutral-50, $neutral-900); }
+    &.flat { @include flat($neutral-50, $primary-500, $primary-300); }
+  }
+
+  // --- KEEP LAST! subtle colour styling - to remain uneffected by color variants ---//
+
+  &.icon {
+    display: flex;
+    align-items: center;
+
+    &:not(.before):not(.after) {
+      border-radius: 50%;
+      padding: 0.5rem;
+
+      svg {
+        top: 0;
+        width: 1.125rem;
+        height: 1.125rem;
+        flex: 0 0 1.125rem;
+      }
+
+      &.large {
+        padding: 0.5rem;
+
+        svg {
+          width: 1.625rem;
+          height: 1.625rem;
+          flex: 0 0 1.625rem;
+        }
+      }
+
+      &.small {
+        padding: 0.375rem;
+
+        svg {
+          width: 0.875rem;
+          height: 0.875rem;
+          flex: 0 0 0.875rem;
+        }
+      }
+
+      &.flat {
+        border-radius: 0;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    &.before svg { margin-right: 0.5rem; }
+    &.after svg { margin-left: 0.5rem; }
+
+    &.flat {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &.subtle {
+    border-color: $neutral-300;
+    color: $neutral-900;
+    fill: $neutral-900;
+    background: white;
+
+    &:hover, &:focus {
+      border-color: $neutral-300;
+      color: $neutral-900;
+      fill: $neutral-900;
+      background: $neutral-300;
+    }
+
+
+    &:active, &.active {
+      border-color: $neutral-100;
+      color: $neutral-900;
+      fill: $neutral-900;
+      background: $neutral-100;
+    }
+
+    &:disabled, &.disabled {
+      border-color: $neutral-300;
+      color: $neutral-500;
+      font-weight: normal;
+      fill: $neutral-500;
+      background: $neutral-50;
+      cursor: default;
+      outline: none;
+    }
+  }
+
+  &.large {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    padding: 0.5rem 1rem;
+
+    &.flat {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    svg {
+      width: 1.125rem;
+      height: 1.125rem;
+      flex: 0 0 1.125rem;
+    }
+  }
+
+  &.small {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    padding: 0.25rem 0.5rem;
+
+    &.flat {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    svg {
+      width: 0.75rem;
+      height: 0.75rem;
+      flex: 0 0 0.75rem;
+    }
+  }
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}

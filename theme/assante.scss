@@ -1,0 +1,104 @@
+// --------------------------------------------------------------------------------------------- //
+// ------------------------------- Assante Connect Brand Colours -------------------------------- //
+// --------------------------------------------------------------------------------------------- //
+
+/// -- Brand Colours -- //
+// ------------------------- //
+$blue-50: #dbf1ff;
+$blue-100: #72befb;
+$blue-300: #4792ee;
+$blue-500: #3175d3;
+$blue-700: #295da7;
+$blue-900: #16407d;
+
+$teal-50: #e2f6f2;
+$teal-100: #49d6ce;
+$teal-300: #00beb7;
+$teal-500: #008084;
+$teal-700: #00646b;
+
+$yellow-50: #f7f2b8;
+$yellow-100: #f4e300;
+$yellow-300: #e6c605;
+
+$sky-50: #eaf5fd;
+$sky-100: #d3e6f4;
+
+// UI Colours
+$ruby-50: #fcefed;
+$ruby-300: #e96654;
+$ruby-500: #d93939;
+$ruby-700: #b31a1a;
+
+$emerald-50: #e9f7e6;
+$emerald-300: #24b33b;
+$emerald-500: #0a884e;
+$emerald-700: #086749;
+
+// Neutrals
+$pearl-0: #fff;
+$pearl-50: #f7f7f8;
+$pearl-100: #e4e4ea;
+$pearl-300: #d0d0d9;
+$pearl-500: #86868f;
+$pearl-700: #606068;
+$pearl-900: #37373f;
+
+/// ---- Colour Mapping ---- //
+// ------------------------- //
+
+$primary: $blue-300;
+$primary-50: $blue-50;
+$primary-100: $blue-100;
+$primary-300: $blue-300;
+$primary-500: $blue-500;
+$primary-700: $blue-700;
+$primary-900: $blue-900;
+
+$secondary: $teal-300;
+$secondary-50: $teal-50;
+$secondary-100: $teal-100;
+$secondary-300: $teal-300;
+$secondary-500: $teal-500;
+$secondary-700: $teal-700;
+
+$tertiary: $yellow-100;
+$tertiary-50: #f7f2b8;
+$tertiary-100: #f4e300;
+$tertiary-300: #e6c605;
+
+$bg-50: $sky-50;
+$bg-100: $sky-100;
+
+$neg: $ruby-500;
+$neg-50: $ruby-50;
+$neg-300: $ruby-300;
+$neg-500: $ruby-500;
+$neg-700: $ruby-700;
+
+$alert-50: $yellow-50;
+$alert-100: $yellow-100;
+$alert-300: $yellow-300;
+
+$pos: $emerald-500;
+$pos-50: $emerald-50;
+$pos-300: $emerald-300;
+$pos-500: $emerald-500;
+$pos-700: $emerald-700;
+
+$white: $pearl-0;
+$neutral-0: $pearl-0;
+$neutral-50: $pearl-50;
+$neutral-100: $pearl-100;
+$neutral-300: $pearl-300;
+$neutral-500: $pearl-500;
+$neutral-700: $pearl-700;
+$neutral-900: $pearl-900;
+$black: $pearl-900;
+
+$font-stack: "GT-Walsheim", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$mono-stack:  "Fira Mono", Consolas, Monaco, monospace;
+$font-features: "kern", "liga", "ss02", "ss04";
+$tab-numbers: "kern", "liga", "tnum", "ss02", "ss04";
+
+@import "../base/settings.scss";

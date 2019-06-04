@@ -1,0 +1,101 @@
+/// -- Brand Colours -- //
+// ------------------------- //
+$jade-50: #ecf9f5;
+$jade-100: #68ccb1;
+$jade-300: #00b298;
+$jade-500: #008579;
+$jade-700: #0e6b64;
+$jade-900: #10504e;
+
+$amethyst-50: #e8e9f1;
+$amethyst-100: #9d9fbc;
+$amethyst-300: #787a97;
+$amethyst-500: #5d5f7a;
+$amethyst-700: #464855;
+
+$amber-50: #fee5a0;
+$amber-100: #f5be44;
+$amber-300: #da9f18;
+
+$mint-50: #ebf4f1;
+$mint-100: #d2e6de;
+
+// UI Colours
+$ruby-50: #fcefed;
+$ruby-300: #e96654;
+$ruby-500: #d93939;
+$ruby-700: #b31a1a;
+
+$emerald-50: #e9f7e6;
+$emerald-300: #24b33b;
+$emerald-500: #0a884e;
+$emerald-700: #086749;
+
+// Neutrals
+$pearl-0: #ffffff;
+$pearl-50: #f7f7f8;
+$pearl-100: #e4e4ea;
+$pearl-300: #d0d0d9;
+$pearl-500: #86868f;
+$pearl-700: #606068;
+$pearl-900: #37373f;
+
+/// ---- Colour Mapping ---- //
+// ------------------------- //
+
+$primary: $jade-300;
+$primary-50: $jade-50;
+$primary-100: $jade-100;
+$primary-300: $jade-300;
+$primary-500: $jade-500;
+$primary-700: $jade-700;
+$primary-900: $jade-900;
+
+$secondary: $amethyst-300;
+$secondary-50: $amethyst-50;
+$secondary-100: $amethyst-100;
+$secondary-300: $amethyst-300;
+$secondary-500: $amethyst-500;
+$secondary-700: $amethyst-700;
+
+$tertiary: $amber-100;
+$tertiary-50: $amber-50;
+$tertiary-100: $amber-100;
+$tertiary-300: $amber-300;
+
+$bg-50: $mint-50;
+$bg-100: $mint-100;
+
+$neg: $ruby-500;
+$neg-50: $ruby-50;
+$neg-300: $ruby-300;
+$neg-500: $ruby-500;
+$neg-700: $ruby-700;
+
+$pos: $emerald-500;
+$pos-50: $emerald-50;
+$pos-300: $emerald-300;
+$pos-500: $emerald-500;
+$pos-700: $emerald-700;
+
+$alert: $amber-100;
+$alert-50: $amber-50;
+$alert-100: $amber-100;
+$alert-300: $amber-300;
+
+$white: $pearl-0;
+$neutral-0: $pearl-0;
+$neutral-50: $pearl-50;
+$neutral-100: $pearl-100;
+$neutral-300: $pearl-300;
+$neutral-500: $pearl-500;
+$neutral-700: $pearl-700;
+$neutral-900: $pearl-900;
+$black: $pearl-900;
+
+$font-stack: "GT-Walsheim", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$mono-stack:  "Fira Mono", Consolas, Monaco, monospace;
+$font-features: "kern", "liga", "ss02", "ss04";
+$tab-numbers: "kern", "liga", "tnum", "ss02", "ss04";
+
+@import "../base/settings.scss";
