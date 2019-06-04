@@ -1,0 +1,15 @@
+{
+  "name": "@wealthbar/peak-base.css",
+  "version": "1.0.0",
+  "description": "Base styling for Peak Design System",
+  "main": "base/index.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.wealth.bar:andrew.pengelly/peak-base.css.git"
+  },
+  "author": "Andrew Pengelly",
+  "license": "ISC"
+}
