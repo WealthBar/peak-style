@@ -109,10 +109,10 @@ ul, ol {
 
 ul {
   list-style: none;
-  &.bullet { list-style: disc; }
+  &.bullet { list-style: disc inside; }
 }
 
-ol { list-style: decimal; }
+ol { list-style: decimal inside; }
 
 li {
   ol, ul {
