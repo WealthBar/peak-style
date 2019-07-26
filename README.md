@@ -9,8 +9,8 @@ A `theme` file is required to be `@import`-ed prior to `peak-base.css`. The them
 **example:**
 
 ```
-@import '~@wealthbar/peak-base.css/theme/wealthbar.scss';
-@import '~@wealthbar/peak-base.css';
+@import '~@wealthbar/peak-base.css/scss/theme/wealthbar';
+@import '~@wealthbar/peak-base.css/scss/index';
 ```
 
 Additionally, `theme` files can be loaded on a per component/page basis to allow use of colour and setting variables within the templated file. Ideally this should be handled by webpack so the developers aren't bothered with having to import a theme everytime they choose to use a variable in the template. The biggest advantage of the webpack setup is the ability to switch theme based on build config ENV variables.

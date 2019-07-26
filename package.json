@@ -2,7 +2,7 @@
   "name": "@wealthbar/peak-base.css",
   "version": "1.0.10",
   "description": "Base styling for Peak Design System",
-  "main": "index.scss",
+  "main": "scss/index.scss",
   "scripts": {
     "wealthbar-base": "node-sass --output-style compressed -o css/ src/wealthbar-base.scss",
     "assante-base": "node-sass --output-style compressed -o css/ src/assante-base.scss",
