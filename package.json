@@ -4,12 +4,19 @@
   "description": "Base styling for Peak Design System",
   "main": "index.scss",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "wealthbar-base": "node-sass --output-style compressed -o css/ src/wealthbar-base.scss",
+    "assante-base": "node-sass --output-style compressed -o css/ src/assante-base.scss",
+    "ppi-base": "node-sass --output-style compressed -o css/ src/ppi-base.scss",
+    "wealthbar-patterns": "node-sass --output-style compressed -o css/ src/wealthbar-patterns.scss",
+    "base": "yarn run wealthbar-base && yarn run assante-base && yarn run ppi-base"
   },
   "repository": {
     "type": "git",
     "url": "git@gitlab.wealth.bar:andrew.pengelly/peak-base.css.git"
   },
   "author": "Andrew Pengelly",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
 }

@@ -1,5 +1,10 @@
 // Settings are generalized across theme files
 
+$font-stack: "GT-Walsheim", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$mono-stack:  "Fira Mono", Consolas, Monaco, monospace;
+$font-features: "kern", "liga", "ss02", "ss04";
+$tab-numbers: "kern", "liga", "tnum", "ss02", "ss04";
+
 // -- Media Queries -- //
 $screen-width-small: 'screen and (min-width: 32rem)';
 $screen-max-small: 'screen and (max-width: 47.999rem)'; // use sparingly

@@ -109,39 +109,6 @@ button.button,
 button[type="button"],
 button[type="reset"],
 button[type="submit"] {
-  display: inline-block;
-  cursor: pointer;
-  font: inherit;
-  font-weight: bold;
-  line-height: 1.125rem;
-  text-align: center;
-  justify-content: center;
-  text-decoration: none;
-  padding: 0.5rem 0.75rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  white-space: nowrap;
-  transition: all 0.3s ease-out;
-
-  svg {
-    height: 1rem;
-    width: 1rem;
-    flex: 0 0 1rem;
-  }
-
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 2px 2px $neutral-500;
-  }
-
-  &::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
-  }
-
-  &.full { width: 100%; }
-
-  @include fill($primary-500, $primary-700, $primary-900);
   &.outline { @include outline($primary-500, $primary-700, $primary-500); }
   &.flat { @include flat($primary-500, $primary-700, $primary-900); }
 
@@ -322,7 +289,7 @@ button[type="submit"] {
   }
 }
 
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
-}
+// ::-webkit-file-upload-button {
+//   -webkit-appearance: button;
+//   font: inherit;
+// }
