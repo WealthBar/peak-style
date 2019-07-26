@@ -1,19 +1,11 @@
 $text-inputs: (
-  // "input[type='date']",
-  // "input[type='email']",
-  // "input[type='number']",
-  // "input[type='password']",
-  // "input[type='search']",
-  // "input[type='tel']",
-  // "input[type='text']",
-  // "input[type='url']",
-  "input:not([type='checkbox'])",
-  "input:not([type='radio'])",
+  "input",
   "textarea",
   "select"
 );
 
 #{$text-inputs} {
+  display: block;
   overflow: auto;
   width: 100%;
   border: 1px solid $neutral-100;

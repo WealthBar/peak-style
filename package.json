@@ -7,8 +7,12 @@
     "wealthbar-base": "node-sass --output-style compressed -o css/ src/wealthbar-base.scss",
     "assante-base": "node-sass --output-style compressed -o css/ src/assante-base.scss",
     "ppi-base": "node-sass --output-style compressed -o css/ src/ppi-base.scss",
+    "base": "yarn run wealthbar-base && yarn run assante-base && yarn run ppi-base",
     "wealthbar-patterns": "node-sass --output-style compressed -o css/ src/wealthbar-patterns.scss",
-    "base": "yarn run wealthbar-base && yarn run assante-base && yarn run ppi-base"
+    "assante-patterns": "node-sass --output-style compressed -o css/ src/assante-patterns.scss",
+    "ppi-patterns": "node-sass --output-style compressed -o css/ src/ppi-patterns.scss",
+    "patterns": "yarn run wealthbar-patterns && yarn run assante-patterns && yarn run ppi-patterns"
+
   },
   "repository": {
     "type": "git",
