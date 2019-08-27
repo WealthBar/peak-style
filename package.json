@@ -1,15 +1,27 @@
 {
   "name": "@wealthbar/peak-base.css",
-  "version": "1.0.10",
+  "version": "1.1.0",
   "description": "Base styling for Peak Design System",
-  "main": "index.scss",
+  "main": "scss/index.scss",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "wealthbar-base": "node-sass --output-style compressed -o css/ src/wealthbar-base.scss",
+    "assante-base": "node-sass --output-style compressed -o css/ src/assante-base.scss",
+    "ppi-base": "node-sass --output-style compressed -o css/ src/ppi-base.scss",
+    "base": "yarn run wealthbar-base && yarn run assante-base && yarn run ppi-base",
+    "wealthbar-patterns": "node-sass --output-style compressed -o css/ src/wealthbar-patterns.scss",
+    "assante-patterns": "node-sass --output-style compressed -o css/ src/assante-patterns.scss",
+    "ppi-patterns": "node-sass --output-style compressed -o css/ src/ppi-patterns.scss",
+    "patterns": "yarn run wealthbar-patterns && yarn run assante-patterns && yarn run ppi-patterns",
+    "css" : "yarn run base && yarn run patterns"
+
   },
   "repository": {
     "type": "git",
     "url": "git@gitlab.wealth.bar:andrew.pengelly/peak-base.css.git"
   },
   "author": "Andrew Pengelly",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
 }
