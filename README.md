@@ -1,4 +1,4 @@
-## peak-style
+# peak-style
 
 This package is used to install the SCSS or CSS style for the *Peak Design System*. Included in this package:
 * *Themes* - The colour values variables and settings associated with the brand (SCSS only for now).
@@ -7,7 +7,7 @@ This package is used to install the SCSS or CSS style for the *Peak Design Syste
 
 ## Usage
 
-## Option 1 - SCSS
+### Option 1 - SCSS
 A `theme` file is required to be `@import`-ed prior to the other style files. The theme file will pre-load all required vaiables for the for `base` styling and the `patterns` library. `base` styles are also required prior to the `pattern` files. These steps ensures the cascade of styles works as intended.
 
 **example:**
@@ -39,7 +39,7 @@ loader: 'sass-loader',
     includePaths: ['src/styles'],
   },
 ```
-## Option 2 - CSS
+### Option 2 - CSS
 
 CSS files are compiled based on `theme` and style package, they are directly imported into any html file. `base` and `patterns` for each theme are split into different files to save weight. As a result of the pre-compile there is *no access* to SCSS variables outside the scope of the file.
 
