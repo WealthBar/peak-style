@@ -149,7 +149,7 @@ button[type="submit"] {
   }
 
   // dark colour styling
-  &.dark {
+  &.dark, &.success {
     @include fill($neutral-900, $neutral-900, $neutral-700);
     &.outline { @include outline($neutral-900, $neutral-700, $neutral-900); }
     &.flat { @include flat($neutral-900, $neutral-900, $neutral-700); }
