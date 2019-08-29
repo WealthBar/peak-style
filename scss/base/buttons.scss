@@ -13,6 +13,11 @@
     background: $hover;
   }
 
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px $text, 0 0 0 3px $hover;
+  }
+
   &:active, &.active {
     border-color: transparent;
     color: $text;
@@ -42,6 +47,11 @@
     color: $text;
     fill: $text;
     background: $hover;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px $text, 0 0 0 3px $hover;
   }
 
   &:active, &.active {
@@ -78,7 +88,7 @@
 
   &:focus {
     box-shadow: none;
-    background: rgba(128, 128, 128, 0.2);
+    font-weight: bold;
   }
 
   &:active, &.active {
@@ -129,11 +139,6 @@ button[type="submit"] {
     flex: 0 0 1rem;
   }
 
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 2px 2px $neutral-500;
-  }
-
   &::-moz-focus-inner {
     border-style: none;
     padding: 0;
@@ -141,6 +146,7 @@ button[type="submit"] {
 
   &.full { width: 100%; }
 
+  // fill is default styling for all buttons
   @include fill($primary-500, $primary-700, $primary-900);
 }
 

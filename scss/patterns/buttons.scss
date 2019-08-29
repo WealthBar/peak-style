@@ -121,28 +121,20 @@ button[type="submit"] {
     &.flat { @include flat($secondary-500, $secondary-300, $secondary-700); }
   }
 
-  &.success {
-    @include fill($neutral-900, $neutral-900, $neutral-900);
-    &.outline { @include fill($neutral-900, $neutral-900, $neutral-900); }
-  }
-
   // alert colour styling
-
   &.alert {
     @include fill($tertiary-100, $tertiary-100, $tertiary-300, $neutral-900);
-
+    &:focus { box-shadow: 0 0 0 1px $white, 0 0 0 3px $tertiary-300; }
     &.outline {
       @include outline($tertiary-300, $tertiary-300, $tertiary-100, $neutral-900);
-
       color: $neutral-900;
       fill: $neutral-900;
+      &:focus { box-shadow: 0 0 0 1px $white, 0 0 0 3px $tertiary-300; }
     }
-
     &.flat { @include flat($tertiary-300, $tertiary-300, $tertiary-100); }
   }
 
   // neg colour styling
-
   &.neg {
     @include fill($neg-500, $neg-500, $neg-700);
     &.outline { @include outline($neg-500, $neg-700, $neg-500); }
@@ -150,23 +142,24 @@ button[type="submit"] {
   }
 
   // pos colour styling
-
   &.pos {
     @include fill($pos-500, $pos-500, $pos-700);
     &.outline { @include outline($pos-500, $pos-700, $pos-500); }
     &.flat { @include flat($pos-500, $pos-500, $pos-700); }
   }
 
-  &.dark {
-    @include fill($neutral-900, $primary-700, $neutral-700);
-    &.outline { @include outline($neutral-900, $primary-700, $neutral-900); }
-    &.flat { @include flat($neutral-900, $primary-500, $primary-700); }
+  // dark colour styling
+  &.dark, &.success {
+    @include fill($neutral-900, $neutral-900, $neutral-700);
+    &.outline { @include outline($neutral-900, $neutral-700, $neutral-900); }
+    &.flat { @include flat($neutral-900, $neutral-900, $neutral-700); }
   }
 
+  // light colour styling
   &.light {
-    @include fill($neutral-50, $primary-300, $neutral-300, $black);
-    &.outline { @include outline($neutral-50, $primary-300, $neutral-50, $neutral-900); }
-    &.flat { @include flat($neutral-50, $primary-500, $primary-300); }
+    @include fill($neutral-50, $neutral-50, $neutral-300, $black);
+    &.outline { @include outline($neutral-50, $neutral-300, $neutral-50, $neutral-900); }
+    &.flat { @include flat($neutral-50, $neutral-50, $neutral-300); }
   }
 
   // --- KEEP LAST! subtle colour styling - to remain uneffected by color variants ---//
@@ -235,7 +228,6 @@ button[type="submit"] {
       background: $neutral-300;
     }
 
-
     &:active, &.active {
       border-color: $neutral-100;
       color: $neutral-900;
@@ -252,6 +244,7 @@ button[type="submit"] {
       cursor: default;
       outline: none;
     }
+    &:focus { box-shadow: 0 0 0 1px $white, 0 0 0 3px $neutral-300; }
   }
 
   &.large {
