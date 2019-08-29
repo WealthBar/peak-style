@@ -12,8 +12,7 @@
     "assante-patterns": "node-sass --output-style compressed -o css/ src/assante-patterns.scss",
     "ppi-patterns": "node-sass --output-style compressed -o css/ src/ppi-patterns.scss",
     "patterns": "yarn run wealthbar-patterns && yarn run assante-patterns && yarn run ppi-patterns",
-    "css" : "yarn run base && yarn run patterns"
-
+    "css": "yarn run base && yarn run patterns"
   },
   "repository": {
     "type": "git",

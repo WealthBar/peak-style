@@ -30,6 +30,13 @@
     margin-right: 0.75rem;
     &:last-child { margin-right: 0; }
   }
+  & + .error-text,
+  & + .help-text,
+  & + .input-text {
+    margin: -1.25rem 0 1.25rem;
+    font-size: 0.875rem;
+    &.error { color: $neg-500; }
+  }
 
   // full width block at smaller sizes
   &.full {

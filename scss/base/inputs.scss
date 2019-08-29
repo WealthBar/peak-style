@@ -77,9 +77,9 @@ textarea {
 
 }
 
-label {
+label, legend {
   display: block;
-  margin:0 0 0.25rem;
+  margin: 0 0 0.25rem;
   font-weight: bold;
   span {
     font-weight: normal;
@@ -97,7 +97,18 @@ label {
 
 legend {
   font-weight: bold;
-  margin: 0 0 0.25rem 0;
+  margin: 0 0 0.5rem 0;
+}
+
+fieldset {
+  margin: 0 0 1.25rem;
+  padding: 0.5rem 0.75rem 0;
+  border: 1px solid $neutral-100;
+  border-radius: 0.25rem;
+  legend {
+    padding: 0 0.25rem;
+    margin: 0 0 0.5rem -0.25rem;
+  }
 }
 
 // ------------------------------------- Select (drop-down menu) -------------------------- //
@@ -153,6 +164,8 @@ input[type='search'] {
   height: 1px; width: 1px;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
+  margin: 0;
+  padding: 0;
   // basic checkbox label style
   & + label {
     display: table;
@@ -167,6 +180,7 @@ input[type='search'] {
   &:focus + label {
     box-shadow: $shadow-focus
   }
+
 }
 
 // --------------------------------------- Checkbox --------------------------------------- //
@@ -277,7 +291,7 @@ input[type=range] {
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
   width: 100%; /* Specific width is required for Firefox. */
   background: transparent; /* Otherwise white; in Chrome */
-  margin: 0;
+  padding: 0;
   border: none;
 }
 
