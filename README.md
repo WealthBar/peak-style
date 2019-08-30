@@ -1,9 +1,9 @@
 # peak-style
 
 This package is used to install the SCSS or CSS style for the *Peak Design System*. Included in this package:
-* *Themes* - The colour values variables and settings associated with the brand (SCSS only for now).
-* *Base styles* - Basic HTML document setup, typography and elemental styling. No layout or structure patterns.
-* *Pattern library* - a resource of commonly used patterns for component structures and page layout.
+* **Themes** - The colour values variables and settings associated with the brand (SCSS only for now).
+* **Base styles** - Basic HTML document setup, typography and elemental styling. No layout or structure patterns.
+* **Pattern library** - a resource of commonly used patterns for component structures and page layout.
 
 ## Usage
 
@@ -17,7 +17,7 @@ A `theme` file is required to be `@import`-ed prior to the other style files. Th
 @import '~@wealthbar/peak-style/scss/base/index';
 @import '~@wealthbar/peak-style/scss/patterns/index';
 ```
-*OR* to load both `base` and `patterns` in one shot:
+**OR** to load both `base` and `patterns` in one shot:
 
 ```
 @import '~@wealthbar/peak-style/scss/theme/wealthbar';
