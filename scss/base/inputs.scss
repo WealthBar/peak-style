@@ -35,7 +35,7 @@ $check-inputs: (
   & + .input-text {
     margin: -1.25rem 0 1.25rem;
     font-size: 0.875rem;
-    &.error { color: $neg-500; }
+    &.error, .error { color: $neg-500; }
   }
 
   &::placeholder {
@@ -48,7 +48,7 @@ $check-inputs: (
     outline: none;
   }
 
-  &.error, &.invalid, &.vf-touched.vf-invalid {
+  &.error, &.invalid {
     border-color: $neg-500;
     outline: none;
     box-shadow: none;
