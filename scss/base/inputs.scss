@@ -43,20 +43,15 @@ $check-inputs: (
     color: $neutral-500;
   }
 
-  &:focus, &:active {
-    border-color: $primary-300;
-    outline: none;
-  }
-
   &.error, &.invalid {
     border-color: $neg-500;
     outline: none;
     box-shadow: none;
+  }
 
-    &:focus, &:active {
-      border-color: $primary-300;
-      outline: none;
-    }
+  &:focus, &:active {
+    border-color: $primary-300;
+    outline: none;
   }
 
   &:disabled {
@@ -163,7 +158,6 @@ input[type='search'] {
   position: absolute !important;
   height: 1px; width: 1px;
   overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
   margin: 0;
   padding: 0;
   // basic checkbox label style

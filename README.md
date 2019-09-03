@@ -1,7 +1,7 @@
 # peak-style
 
 This package is used to install the SCSS or CSS style for the *Peak Design System*. Included in this package:
-* **Themes** - The colour values variables and settings associated with the brand (SCSS only for now).
+* **Themes** - The colour values, variables, and settings associated with the brand (SCSS only for now).
 * **Base styles** - Basic HTML document setup, typography and elemental styling. No layout or structure patterns.
 * **Pattern library** - a resource of commonly used patterns for component structures and page layout.
 
