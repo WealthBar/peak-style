@@ -10,6 +10,8 @@ $check-inputs: (
   "input[type='checkbox']"
 );
 
+// ------------------------------------- Text based inputs ----------------------------------- //
+
 #{$text-inputs} {
   display: block;
   overflow: auto;
@@ -25,35 +27,24 @@ $check-inputs: (
   margin: 0 0 1.25rem;
   color: $neutral-900;
 
-  // utility classes to remove bottom margin with input messaging
-  // example structure:
-  // <label>label</label>
-  // <input>
-  // <p class="error-text">I am error</p>
-  & + .error-text,
-  & + .help-text,
-  & + .input-text {
-    margin: -1.25rem 0 1.25rem;
-    font-size: 0.875rem;
-    &.error, .error { color: $neg-500; }
-  }
-
-  &::placeholder {
-    opacity: 0.7;
-    color: $neutral-500;
-  }
-
-  &.error, &.invalid {
+  // basic invalid/error handling for text-inputs
+  // (vf-touched.vf-invalid for vue-form validator)
+  &.invalid,
+  &.vf-touched.vf-invalid {
     border-color: $neg-500;
     outline: none;
     box-shadow: none;
   }
 
+  // basic state styling for for text-inputs
+  &::placeholder {
+    opacity: 0.7;
+    color: $neutral-500;
+  }
   &:focus, &:active {
     border-color: $primary-300;
     outline: none;
   }
-
   &:disabled {
     background: $neutral-50;
     color: $neutral-300;
@@ -69,14 +60,15 @@ textarea {
   max-width: 100%;
   min-width: 100%;
   min-height: 5rem;
-
 }
+
+// ------------------------------------- Form elements and structures ----------------------------------- //
 
 label, legend {
   display: block;
   margin: 0 0 0.25rem;
   font-weight: bold;
-  span {
+  .optional {
     font-weight: normal;
     &::before {
       display: inline-block;
@@ -90,11 +82,6 @@ label, legend {
   }
 }
 
-legend {
-  font-weight: bold;
-  margin: 0 0 0.5rem 0;
-}
-
 fieldset {
   margin: 0 0 1.25rem;
   padding: 0.5rem 0.75rem 0;
@@ -104,6 +91,9 @@ fieldset {
     padding: 0 0.25rem;
     margin: 0 0 0.5rem -0.25rem;
   }
+
+  // basic invalid/error handling for fieldset
+  &.invalid { border-color: $neg-500; }
 }
 
 // ------------------------------------- Select (drop-down menu) -------------------------- //
@@ -156,10 +146,14 @@ input[type='search'] {
 #{$check-inputs} {
   // visually hide the real checkbox
   position: absolute !important;
-  height: 1px; width: 1px;
+  height: 1px;
+  width: 1px;
   overflow: hidden;
   margin: 0;
   padding: 0;
+  z-index: -1;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
   // basic checkbox label style
   & + label {
     display: table;
@@ -174,7 +168,11 @@ input[type='search'] {
   &:focus + label {
     box-shadow: $shadow-focus
   }
-
+  // basic invalid/error handling for check-inputs
+  &.invalid + label:before,
+  &.vf-touched.vf-invalid + label:before {
+    border-color: $neg-500;
+  }
 }
 
 // --------------------------------------- Checkbox --------------------------------------- //
@@ -317,7 +315,7 @@ input[type=range]::-webkit-slider-runnable-track {
   cursor: pointer;
   background: white;
   border-radius: 0.75rem;
-  border: 1px solid $neutral-100;
+  border: 1px solid $neutral-300;
 }
 
 
@@ -343,7 +341,7 @@ input[type=range]::-moz-range-track {
   cursor: pointer;
   background: white;
   border-radius: 0.75rem;
-  border: 1px solid $neutral-100;
+  border: 1px solid $neutral-300;
 }
 
 input[type=range]::-moz-focus-outer { border: 0; }
@@ -376,7 +374,7 @@ input[type=range]::-ms-track {
 input[type=range]::-ms-fill-lower,
 input[type=range]::-ms-fill-upper {
   background: white;
-  border: 1px solid $neutral-100;
+  border: 1px solid $neutral-300;
   border-radius: 0.75rem;
 }
 
@@ -387,4 +385,15 @@ input[type=range]:focus::-ms-fill-lower {
 
 input[type=range]:focus::-ms-fill-upper {
   border: 1px solid $primary-300;
+}
+
+// --------------------------------------- File Inputs --------------------------------------- //
+
+input[type="file"] {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  padding: 0;
+  overflow: hidden;
 }

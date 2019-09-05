@@ -1,33 +1,81 @@
-// basic input wrap class to ensure formatting
 
+// ------------------------- input structure classes ------------------------- //
+
+// basic label/input/error-message wrapper class to ensure formatting
 .field {
   display: flex;
   flex-direction: column;
 }
 
-// error handling for vue-form validator
-
-.vf-touched.vf-invalid #{$text-inputs},
-input.vf-touched.vf-invalid,
-select.vf-touched.vf-invalid,
-textarea.vf-touched.vf-invalid {
-  border-color: $neg-500;
-  outline: none;
-  box-shadow: none;
-
-  &:focus, &:active {
-    border-color: $primary-300;
+// class for components so they ar structured like inputs
+.input {
+  display: block;
+  margin: 0 0 1.25rem;
+  // error handling for input class components
+  &.invalid input,
+  &.vf-touched.vf-invalid input {
+    border-color: $neg-500;
     outline: none;
+    box-shadow: none;
   }
 }
 
-// ------------------------------------- multiple inline input support -------------------------- //
+// ------------------------- Error, Warning, and Help messaging ------------------------- //
+
+.error-message,
+.warning-message,
+.help-message {
+  display: block;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  white-space: pre-wrap;
+  svg {
+    width: 0.875rem;
+    height: 0.875rem;
+    margin-right: 0.25rem;
+  }
+}
+
+.error-message {
+  color: $neg-500;
+  fill: $neg-500;
+}
+.warning-message {
+  color: $alert-300;
+  fill: $alert-300;
+}
+
+// remove bottom margin with input messaging
+
+// example structure:
+//
+// <label>label</label>
+// <input class="invalid">
+// <p class="error-message">I am error</p>
+
+input:not([type="file"]),
+textarea,
+select,
+input[type="checkbox"],
+input[type="radio"],
+.input,
+.inline-input,
+.inline-button {
+  & + .error-message,
+  & + .warning-message,
+  & + .help-message {
+    margin: -1.25rem 0 1.25rem;
+  }
+}
+
+// ------------------------- multiple inline input support ------------------------- //
 
 // structure:
 // <div class="inline-input">
-//   <div>label & input (help/error text)</div>
-//   <div>label & input (help/error text)</div>
-//   <div>label & input (help/error text)</div
+//   <div>label & input (optional help/error message)</div>
+//   <div>label & input (optional help/error message)</div>
+//   <div>label & input (optional help/error message)</div>
 // <div>
 
 // OR
@@ -38,7 +86,7 @@ textarea.vf-touched.vf-invalid {
 //   <input>
 //   <input>
 // <div>
-// <div>help/error text</div>
+// <div class="help-message">help/error message</div>
 
 // NOTE: <div>s in structure above can be replaced with any container element
 
@@ -47,35 +95,20 @@ textarea.vf-touched.vf-invalid {
   display: flex;
   justify-content: flex-start;
   margin: 0;
-  > *,
-  > #{$text-inputs} {
+  > * {
     flex: 0 1 auto;
     margin-right: 0.75rem;
     &:last-child { margin-right: 0; }
   }
-  & + .error-text,
-  & + .help-text,
-  & + .input-text {
-    margin: -1.25rem 0 1.25rem;
-    font-size: 0.875rem;
-    &.error, .error { color: $neg-500; }
-  }
-
   // full width block at smaller sizes
   &.full {
     display: block;
-    > *,
-    > #{$text-inputs} {
-      margin-right: 0;
-      flex: 1 1 auto;
-    }
+    > * { margin-right: 0; }
     @media #{$screen-width-medium} {
       display: flex;
-      > *,
-      > #{$text-inputs} {
-        flex: 1 1 auto;
+      > * {
+        flex: 1 1 100%;
         margin-right: 0.75rem;
-
         &:last-child { margin-right: 0; }
       }
     }
@@ -88,7 +121,7 @@ textarea.vf-touched.vf-invalid {
   }
 }
 
-// ------------------------------------- inline input + button -------------------------- //
+// ------------------------- inline input + button ------------------------- //
 
 // structure:
 // <label>label</label>
@@ -96,7 +129,7 @@ textarea.vf-touched.vf-invalid {
 //   <input>
 //   <button>
 // <div>
-// <div>help/error text</div>
+// <div class="help-message">help/error message</div>
 
 // NOTE: <div>s in structure above can be replaced with any container element
 
@@ -109,7 +142,9 @@ textarea.vf-touched.vf-invalid {
     flex: 1 1 auto;
     margin: 0;
   }
-  button, a.button, input[type="button"] {
+  button[type="button"],
+  input[type="button"],
+  a.button {
     flex: 1 0 auto;
     padding: 0.25rem 0.75rem;
     line-height: 1rem;
@@ -120,21 +155,15 @@ textarea.vf-touched.vf-invalid {
     &.flat { padding: 0.25rem 0.75rem; }
     &.large, &.flat.large { padding: 0 1rem; }
   }
-  & + .error-text,
-  & + .help-text,
-  & + .input-text {
-    margin: -1.25rem 0 1.25rem;
-    font-size: 0.875rem;
-    &.error, .error { color: $neg-500; }
-  }
 }
 
-// ------------------------------------- Semi-Fancy Checkbox Class ------------------------------------- //
+// ------------------------- Semi-Fancy Checkbox Class ------------------------- //
 
 input[type="checkbox"].semi-fancy {
   + label {
     font-weight: bold;
     span {
+      font-weight: normal;
       display: block;
       margin-top: 0.75rem;
       color: $neutral-700;
@@ -143,7 +172,7 @@ input[type="checkbox"].semi-fancy {
   }
 }
 
-// ------------------------------------- Fancy Radio/Checkbox Class ------------------------------------- //
+// ------------------------- Fancy Radio/Checkbox Class ------------------------- //
 
 input[type="radio"].fancy,
 input[type="radio"].semi-fancy,
@@ -155,11 +184,11 @@ input[type="radio"].semi-fancy,
     padding: 0.75rem 0.75rem 0.75rem 2.75rem;
     border: 1px solid transparent;
     border-radius: 0.25rem;
-    color: $black;
     text-align: left;
     font-weight: bold;
     cursor: pointer;
     span {
+      font-weight: normal;
       display: block;
       margin-top: 0.75rem;
       color: $neutral-700;

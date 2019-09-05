@@ -89,6 +89,7 @@
   &:focus {
     box-shadow: none;
     font-weight: bold;
+    stroke: $hover;
   }
 
   &:active, &.active {
@@ -132,11 +133,12 @@ button[type="submit"] {
   border-radius: 0.25rem;
   white-space: nowrap;
   transition: all 0.3s ease-out;
-
+  stroke: transparent;
   svg {
     height: 1rem;
     width: 1rem;
     flex: 0 0 1rem;
+    transition: all 0.3s ease-out;
   }
 
   &::-moz-focus-inner {
