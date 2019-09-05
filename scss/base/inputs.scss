@@ -315,7 +315,7 @@ input[type=range]::-webkit-slider-runnable-track {
   cursor: pointer;
   background: white;
   border-radius: 0.75rem;
-  border: 1px solid $neutral-100;
+  border: 1px solid $neutral-300;
 }
 
 
@@ -341,7 +341,7 @@ input[type=range]::-moz-range-track {
   cursor: pointer;
   background: white;
   border-radius: 0.75rem;
-  border: 1px solid $neutral-100;
+  border: 1px solid $neutral-300;
 }
 
 input[type=range]::-moz-focus-outer { border: 0; }
@@ -374,7 +374,7 @@ input[type=range]::-ms-track {
 input[type=range]::-ms-fill-lower,
 input[type=range]::-ms-fill-upper {
   background: white;
-  border: 1px solid $neutral-100;
+  border: 1px solid $neutral-300;
   border-radius: 0.75rem;
 }
 
