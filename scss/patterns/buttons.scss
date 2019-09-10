@@ -1,10 +1,5 @@
-a.button,
-span.button,
-label.button,
-button.button,
-button[type="button"],
-button[type="reset"],
-button[type="submit"] {
+
+#{$buttons} {
 
   // ---   BUTTON STYLING VARIANTS   --- //
 
@@ -177,6 +172,4 @@ button[type="submit"] {
     }
     &:focus { box-shadow: 0 0 0 1px $white, 0 0 0 3px $neutral-300; }
   }
-
-
 }

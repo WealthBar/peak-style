@@ -1,13 +1,13 @@
 // Ya Basics
 $shadow-focus: 0 0 0 0.25rem $white, 0 0 0 0.375rem $bg-100;
 $text-inputs: (
-  "input",
-  "textarea",
-  "select"
+  'input',
+  'textarea',
+  'select'
 );
 $check-inputs: (
-  "input[type='radio']",
-  "input[type='checkbox']"
+  'input[type="radio"]',
+  'input[type="checkbox"]'
 );
 
 // ------------------------------------- Text based inputs ----------------------------------- //
@@ -29,6 +29,7 @@ $check-inputs: (
 
   // basic invalid/error handling for text-inputs
   // (vf-touched.vf-invalid for vue-form validator)
+  &:invalid:not(:required),
   &.invalid,
   &.vf-touched.vf-invalid {
     border-color: $neg-500;
@@ -52,6 +53,15 @@ $check-inputs: (
       border-color: $neutral-300;
       outline: none;
     }
+  }
+}
+
+input[type=number] {
+  -moz-appearance:textfield; /* Firefox */
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 }
 
@@ -84,16 +94,7 @@ label, legend {
 
 fieldset {
   margin: 0 0 1.25rem;
-  padding: 0.5rem 0.75rem 0;
-  border: 1px solid $neutral-100;
-  border-radius: 0.25rem;
-  legend {
-    padding: 0 0.25rem;
-    margin: 0 0 0.5rem -0.25rem;
-  }
-
-  // basic invalid/error handling for fieldset
-  &.invalid { border-color: $neg-500; }
+  *:last-child { margin-bottom: 0rem !important; }
 }
 
 // ------------------------------------- Select (drop-down menu) -------------------------- //
@@ -165,15 +166,16 @@ input[type='search'] {
     padding-left: 2rem;
     margin: 0 0 0.75rem;
   }
-  &:focus + label {
-    box-shadow: $shadow-focus
-  }
+
+  &:focus + label { box-shadow: $shadow-focus }
   // basic invalid/error handling for check-inputs
+  &:invalid + label:before,
   &.invalid + label:before,
   &.vf-touched.vf-invalid + label:before {
     border-color: $neg-500;
   }
 }
+
 
 // --------------------------------------- Checkbox --------------------------------------- //
 
@@ -188,7 +190,7 @@ input[type='checkbox'] {
     top: 0;
     left: 0;
     border-radius: 0.125rem;
-    border: 1px solid $neutral-700;
+    border: 1px solid $neutral-300;
     background-color: white;
     background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Cpath%20fill%3D%27white%27%20d%3D%27m24%2052.4-20.8-20.8%205.6-5.6%2015.2%2015.1%2031.2-31.1%205.6%205.6z%27%2F%3E%3C%2Fsvg%3E");
     background-size: 1rem;
@@ -241,7 +243,7 @@ input[type="radio"] {
     height: 1.25rem;
     width: 1.25rem;
     border-radius: 1.25rem;
-    border: 1px solid $black;
+    border: 1px solid $neutral-300;
     margin: 0 0.75rem 0 0;
   }
   &:hover + label:before,

@@ -20,6 +20,35 @@
   }
 }
 
+.fieldset {
+  margin: 0 0 1.25rem;
+  padding: 0.25rem 0.75rem 1rem;
+  border: 1px solid $neutral-500;
+  background: $white;
+  border-radius: 0.25rem;
+  legend {
+    margin: -1rem 0 0.75rem -0.25rem;
+    padding: 0 0.25rem;
+    display: table;
+    background: $white;
+    background-color: inherit;
+  }
+  *:last-child { margin-bottom: 0rem; }
+  // basic invalid/error handling for fieldset
+  &.invalid { border-color: $neg-500; }
+}
+
+
+// legend fix for fieldset element
+fieldset.fieldset legend {
+  display: initial;
+  margin: 0 0 0.25rem -0.25rem;
+}
+
+
+
+//
+
 // ------------------------- Error, Warning, and Help messaging ------------------------- //
 
 .error-message,
@@ -66,6 +95,21 @@ input[type="radio"],
   & + .warning-message,
   & + .help-message {
     margin: -1.25rem 0 1.25rem;
+  }
+}
+input[type="file"] {
+  & + .error-message,
+  & + .warning-message,
+  & + .help-message {
+    margin: 0 0 1.25rem;
+  }
+}
+
+label,
+legend {
+  &.required:after {
+    content: "*";
+    color: $neg;
   }
 }
 
@@ -142,9 +186,7 @@ input[type="radio"],
     flex: 1 1 auto;
     margin: 0;
   }
-  button[type="button"],
-  input[type="button"],
-  a.button {
+  #{$buttons} {
     flex: 1 0 auto;
     padding: 0.25rem 0.75rem;
     line-height: 1rem;
@@ -157,12 +199,12 @@ input[type="radio"],
   }
 }
 
-// ------------------------- Semi-Fancy Checkbox Class ------------------------- //
+// ------------------------- Radio and Checkbox description Class ------------------------- //
 
-input[type="checkbox"].semi-fancy {
+
+#{$check-inputs} {
   + label {
-    font-weight: bold;
-    span {
+    .description {
       font-weight: normal;
       display: block;
       margin-top: 0.75rem;
@@ -170,69 +212,106 @@ input[type="checkbox"].semi-fancy {
       &::before { display: none; }
     }
   }
-}
+  &.padded,
+  &.border {
+    + label{
+      display: block;
+      padding: 0.75rem 0.75rem 0.75rem 2.75rem;
+      margin: 0 0 0.75rem;
+      border-radius: 0.25rem;
+      border: 1px solid transparent;
+    }
+    &:focus + label {
+      box-shadow: 0 0 0 2px $white, 0 0 0 4px $bg-100;
+    }
+    & + label:before { // outer circle/
+      top: .75rem;
+      left: .75rem;
+    }
 
+    & + label:after { // inner circle w/ no interaction
+      top: 1.375rem;
+      left: 1.375rem;
+    }
+    &:focus + label:after,
+    &:checked + label:after { // inner circle when checked
+      top: 1rem;
+      left: 1rem;
+    }
+  }
+  &.border {
+    + label {
+      border: 1px solid $neutral-100;
+      background-color: $white;
+      &:hover {
+        background-color: $bg-50;
+        border-color: $bg-50;
+      }
+    }
+
+    &:focus + label,
+    &:checked + label {
+      background-color: $bg-50;
+      border: 1px solid $bg-50;
+    }
+
+    &:focus + label:before {
+      box-shadow: none;
+    }
+  }
+}
 // ------------------------- Fancy Radio/Checkbox Class ------------------------- //
 
-input[type="radio"].fancy,
-input[type="radio"].semi-fancy,
+// input[type="radio"].fancy,
+// input[type="radio"].semi-fancy,
+// input[type="radio"].padded,
 // .fancy-radio-button for back compatability - to be removed
-.fancy-radio-button input[type="radio"] {
-  + label {
-    display: block;
-    margin: 0 0 0.75rem;
-    padding: 0.75rem 0.75rem 0.75rem 2.75rem;
-    border: 1px solid transparent;
-    border-radius: 0.25rem;
-    text-align: left;
-    font-weight: bold;
-    cursor: pointer;
-    span {
-      font-weight: normal;
-      display: block;
-      margin-top: 0.75rem;
-      color: $neutral-700;
-      &::before { display: none; }
-    }
-  }
-  &:focus + label {
-    box-shadow: 0 0 0 2px $white, 0 0 0 4px $bg-100;
-  }
-  & + label:before { // outer circle w/ no interaction
-    top: .75rem;
-    left: .75rem;
-  }
+// .fancy-radio-button input[type="radio"] {
+  // + label {
+  //   display: block;
+  //   padding: 0.75rem 0.75rem 0.75rem 2.75rem;
+  //   border: 1px solid transparent;
+  //   text-align: left;
+  //   cursor: pointer;
+  // }
+  // &:focus + label {
+  //   box-shadow: 0 0 0 2px $white, 0 0 0 4px $bg-100;
+  // }
+  // & + label:before { // outer circle w/ no interaction
+  //   top: .75rem;
+  //   left: .75rem;
+  // }
 
-  & + label:after { // inner circle w/ no interaction
-    top: 1.375rem;
-    left: 1.375rem;
-  }
-  &:focus + label:after,
-  &:checked + label:after { // inner circle when checked
-    top: 1rem;
-    left: 1rem;
-  }
-}
+//   & + label:after { // inner circle w/ no interaction
+//     top: 1.375rem;
+//     left: 1.375rem;
+//   }
+//   &:focus + label:after,
+//   &:checked + label:after { // inner circle when checked
+//     top: 1rem;
+//     left: 1rem;
+//   }
+// }
 
-input[type="radio"].fancy,
-// .fancy-radio-button for back compatability - to be removed
-.fancy-radio-button input[type="radio"]{
-  + label {
-    border: 1px solid $neutral-100;
-    background-color: $white;
-    &:hover {
-      background-color: $bg-50;
-      border-color: $bg-50;
-    }
-  }
+// input[type="radio"].fancy,
+// // .fancy-radio-button for back compatability - to be removed
+// .fancy-radio-button input[type="radio"]{
+//   + label {
+//     border: 1px solid $neutral-100;
+//     background-color: $white;
+//     &:hover {
+//       background-color: $bg-50;
+//       border-color: $bg-50;
+//     }
+//   }
 
-  &:focus + label,
-  &:checked + label {
-    background-color: $bg-50;
-    border: 1px solid $bg-50;
-  }
+//   &:focus + label,
+//   &:checked + label {
+//     background-color: $bg-50;
+//     border: 1px solid $bg-50;
+//   }
 
-  &:focus + label:before {
-    box-shadow: none;
-  }
-}
+//   &:focus + label:before {
+//     box-shadow: none;
+//   }
+// }

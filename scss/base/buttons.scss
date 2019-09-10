@@ -111,15 +111,19 @@
 
 /* --------   End Mixins   -------- */
 
+$buttons: (
+  'a.button',
+  'span.button',
+  'label.button',
+  'button.button',
+  'button[type="button"]',
+  'button[type="reset"]',
+  'button[type="submit"]'
+);
+
 /* --------   BUTTON STYLING   -------- */
 
-a.button,
-span.button,
-label.button,
-button.button,
-button[type="button"],
-button[type="reset"],
-button[type="submit"] {
+#{$buttons} {
   display: inline-block;
   cursor: pointer;
   font: inherit;
