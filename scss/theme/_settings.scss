@@ -16,3 +16,145 @@ $small-width: 32rem;
 $medium-width: 48rem;
 $large-width: 64rem;
 $xlarge-width: 80rem;
+
+// -- Element selector lists -- //
+
+$text-inputs: (
+  'input[type="email"]',
+  'input[type="number"]',
+  'input[type="password"]',
+  'input[type="search"]',
+  'input[type="tel"]',
+  'input[type="text"]',
+  'input[type="url"]',
+  'input:not([type])',
+  'textarea',
+  'select'
+);
+
+$check-inputs: (
+  'input[type="radio"]',
+  'input[type="checkbox"]'
+);
+
+$buttons: (
+  'a.button',
+  'span.button',
+  'label.button',
+  'button.button',
+  'button[type="button"]',
+  'button[type="reset"]',
+  'button[type="submit"]',
+  'input[type="button"]'
+);
+
+/* --------   Mixins SPECIFICALLY for base/buttons and patterns/buttons   -------- */
+
+@mixin fill($default, $active, $hover, $text: white ) {
+  border-color: transparent;
+  color: $text;
+  fill: $text;
+  background: $default;
+
+  &:hover, &:focus {
+    border-color: transparent;
+    color: $text;
+    fill: $text;
+    background: $hover;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px $text, 0 0 0 3px $hover;
+  }
+
+  &:active, &.active {
+    border-color: transparent;
+    color: $text;
+    fill: $text;
+    background: $active;
+  }
+
+  &:disabled, &.disabled {
+    border-color: $neutral-300;
+    color: $neutral-500;
+    font-weight: normal;
+    fill: $neutral-500;
+    background: $neutral-50;
+    outline: none;
+    cursor: default;
+  }
+}
+
+@mixin outline($default, $active, $hover, $text: white ) {
+  border-color: $default;
+  color: $default;
+  fill: $default;
+  background: transparent;
+
+  &:hover, &:focus {
+    border-color: $hover;
+    color: $text;
+    fill: $text;
+    background: $hover;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px $text, 0 0 0 3px $hover;
+  }
+
+  &:active, &.active {
+    border-color: $active;
+    color: $text;
+    fill: $text;
+    background: $active;
+  }
+
+  &:disabled, &.disabled {
+    border-color: $neutral-300;
+    color: $neutral-500;
+    font-weight: normal;
+    fill: $neutral-500;
+    background: $neutral-50;
+    outline: none;
+    cursor: default;
+  }
+}
+
+@mixin flat($default, $active, $hover) {
+  border-color: transparent;
+  color: $default;
+  fill: $default;
+  background: transparent;
+  padding: 0.375rem 0;
+  font-weight: normal;
+
+  &:hover, &:focus {
+    border-color: transparent;
+    color: $hover;
+    fill: $hover;
+  }
+
+  &:focus {
+    box-shadow: none;
+    font-weight: bold;
+    stroke: $hover;
+  }
+
+  &:active, &.active {
+    border-color: transparent;
+    color: $active;
+    fill: $active;
+    background: transparent;
+  }
+
+  &:disabled, &.disabled {
+    fill: $neutral-500;
+    color: $neutral-500;
+    cursor: default;
+    background: transparent;
+    outline: none;
+    border: none;
+  }
+}
