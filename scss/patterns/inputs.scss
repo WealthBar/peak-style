@@ -182,7 +182,8 @@ legend {
   justify-content: flex-start;
   align-items: center;
   margin: 0 0 1.25rem;
-  input {
+  input,
+  select {
     flex: 1 1 auto;
     margin: 0;
   }
