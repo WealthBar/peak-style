@@ -5,8 +5,8 @@ button,
 input,
 select,
 textarea {
-  font-family: "GT-Walsheim", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-feature-settings: "kern", "liga", "ss02", "ss04";
+  font-family: $font-stack;
+  font-feature-settings: $font-features;
   font-weight: normal;
   font-size: 1rem;
   line-height: 1.375rem;
@@ -87,7 +87,7 @@ em, i, var, .em { font-style: normal; }
 del, .neg { color: $ruby-500; }
 .pos { color: $primary-500; }
 
-.tab-numbers { font-feature-settings: "kern", "liga", "tnum", "ss02", "ss04"; }
+.tab-numbers { font-feature-settings: $tab-numbers; }
 .subtle { color: rgba($neutral-900, 0.77); }
 .capitalize { text-transform: capitalize; }
 .uppercase { text-transform: uppercase; }
@@ -123,7 +123,7 @@ li {
 
 pre,
 code {
-  font-family: 'Fira Mono', monospace;
+  font-family: $mono-stack;
   font-size: 0.875rem;
 }
 .no-margin { margin: 0; }

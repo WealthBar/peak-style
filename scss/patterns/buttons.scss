@@ -1,3 +1,12 @@
+$buttons: (
+  'a.button',
+  'span.button',
+  'label.button',
+  'button.button',
+  'button[type="button"]',
+  'button[type="reset"]',
+  'button[type="submit"]'
+);
 
 #{$buttons} {
 
