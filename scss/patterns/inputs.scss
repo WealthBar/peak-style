@@ -13,7 +13,7 @@
   margin: 0 0 1.25rem;
   // error handling for input class components
   &.invalid input,
-  &.vf-touched.vf-invalid.vf-dirty input {
+  &.vf-touched.vf-invalid input {
     border-color: $neg-500;
     outline: none;
     box-shadow: none;
