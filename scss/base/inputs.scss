@@ -19,7 +19,7 @@
   // (vf-touched.vf-invalid for vue-form validator)
   &:invalid:not(:required),
   &.invalid,
-  &.vf-touched.vf-invalid.vf-dirty {
+  &.vf-touched.vf-invalid {
     border-color: $neg-500;
     outline: none;
     box-shadow: none;
@@ -159,7 +159,7 @@ input[type='search'] {
   // basic invalid/error handling for check-inputs
   &:invalid + label:before,
   &.invalid + label:before,
-  &.vf-touched.vf-invalid.vf-dirty + label:before {
+  &.vf-touched.vf-invalid + label:before {
     border-color: $neg-500;
   }
 }
