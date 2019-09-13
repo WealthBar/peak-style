@@ -3,16 +3,16 @@
 #{$text-inputs} {
   display: block;
   overflow: auto;
+  -webkit-appearance: none;
   width: 100%;
+  padding: 0.25rem 0.5rem;
+  margin: 0 0 1.25rem;
+  height: 2rem;
+  line-height: 1rem;
+  transition: all 0.3s ease-out;
   border: 1px solid $neutral-300;
   border-radius: 0;
   background-color: $white;
-  padding: 0.25rem 0.5rem;
-  transition: all 0.3s ease-out;
-  -webkit-appearance: none;
-  height: 2rem;
-  line-height: 1rem;
-  margin: 0 0 1.25rem;
   color: $neutral-900;
 
   // basic invalid/error handling for text-inputs
@@ -78,6 +78,7 @@ label, legend {
       margin: 0.25rem;
     }
   }
+  &.button { margin: 0 0 1.25rem; }
 }
 
 fieldset {
@@ -274,6 +275,7 @@ input[type=range] {
   width: 100%; /* Specific width is required for Firefox. */
   background: transparent; /* Otherwise white; in Chrome */
   padding: 0;
+  margin: 0 0 1.25rem;
   border: none;
 }
 

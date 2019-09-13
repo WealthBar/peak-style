@@ -49,15 +49,23 @@ fieldset.fieldset legend {
 .error-message,
 .warning-message,
 .help-message {
-  display: block;
-  font-size: 0.875rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  font-size: 0.875rem;
   white-space: pre-wrap;
+  transition: all 0.3s ease-out;
   svg {
-    width: 0.875rem;
-    height: 0.875rem;
-    margin-right: 0.25rem;
+    width: 1rem;
+    height: 1rem;
+    margin: 0.125rem 0.5rem 0 0;
+  }
+  &.large {
+    font-size: 1rem;
+    svg {
+      width: 1.375rem;
+      height: 1.375rem;
+      margin: 0 0.5rem 0 0;
+    }
   }
 }
 
@@ -78,11 +86,13 @@ fieldset.fieldset legend {
 // <input class="invalid">
 // <p class="error-message">I am error</p>
 
-input:not([type="file"]),
+input,
 textarea,
 select,
 input[type="checkbox"],
 input[type="radio"],
+input[type="file"] + label,
+label.button,
 .input,
 .inline-input,
 .inline-button {
@@ -90,13 +100,6 @@ input[type="radio"],
   & + .warning-message,
   & + .help-message {
     margin: -1.25rem 0 1.25rem;
-  }
-}
-input[type="file"] {
-  & + .error-message,
-  & + .warning-message,
-  & + .help-message {
-    margin: 0 0 1.25rem;
   }
 }
 
