@@ -14,9 +14,17 @@ a, button, .link {
   transition: all 300ms ease-out;
 
   &.icon svg {
-    vertical-align: text-top;
+    vertical-align: middle;
     width: 1rem;
     height: 1rem;
+  }
+
+  &.icon.before svg {
+    margin-right: 0.5rem;
+  }
+
+  &.icon.after svg {
+    margin-left: 0.5rem;
   }
 
   &::-moz-focus-inner {
@@ -69,11 +77,22 @@ a, button, .link {
   &.pos { @include variant($pos-500, $pos-500, $pos-700); }
   &.light { @include variant($neutral-0, $neutral-50, $neutral-100); }
   &.dark { @include variant($neutral-900, $neutral-900, $neutral-700); }
-  &.small { font-size: 0.875rem; }
+
+  &.small {
+    font-size: 0.875rem;
+    svg {
+      width: 0.875rem;
+      height: 0.875rem;
+    }
+  }
 
   &.large {
     font-size: 1.125rem;
     line-height: 1.5rem;
+    svg {
+      width: 1.125rem;
+      height: 1.125rem;
+    }
   }
 
   &.href-plain { text-decoration: none; }
@@ -84,4 +103,11 @@ a, button, .link {
     color: $neutral-500;
     cursor: default;
   }
+  // svg {
+  //   text-decoration: none;
+  //   height: 1.325rem;
+  //   width: 1.325rem;
+  //   margin-right: 0.5rem;
+  //   vertical-align: middle;
+  // }
 }

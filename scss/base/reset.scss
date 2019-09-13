@@ -42,7 +42,10 @@ html {
   position: relative;
 }
 
-body { min-height: 100vh; }
+body {
+  min-height: 100vh;
+  background: $neutral-0;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, dialog, figcaption, figure,
