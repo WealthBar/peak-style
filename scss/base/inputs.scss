@@ -31,7 +31,7 @@
     color: $neutral-500;
   }
   &:focus, &:active {
-    border-color: $primary-300;
+    border-color: $primary-500;
     outline: none;
   }
   &:disabled {
@@ -387,5 +387,6 @@ input[type="file"] {
   height: 1px;
   opacity: 0;
   padding: 0;
+  margin: 0;
   overflow: hidden;
 }

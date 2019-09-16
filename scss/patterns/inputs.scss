@@ -7,10 +7,19 @@
   flex-direction: column;
 }
 
-// class for components so they ar structured like inputs
+// class for components so they are structured like inputs
 .input {
   display: block;
   margin: 0 0 1.25rem;
+  input,
+  textarea,
+  select,
+  input[type="checkbox"] + label,
+  input[type="radio"] + label,
+  input[type="file"] + label,
+  label.button {
+    margin: 0;
+  }
   // error handling for input class components
   &.invalid input,
   &.vf-touched.vf-invalid input {
@@ -89,8 +98,6 @@ fieldset.fieldset legend {
 input,
 textarea,
 select,
-input[type="checkbox"],
-input[type="radio"],
 input[type="file"] + label,
 label.button,
 .input,
@@ -100,6 +107,15 @@ label.button,
   & + .warning-message,
   & + .help-message {
     margin: -1.25rem 0 1.25rem;
+  }
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  & + .error-message,
+  & + .warning-message,
+  & + .help-message {
+    margin: -0.75rem 0 1.25rem;
   }
 }
 
@@ -196,7 +212,10 @@ legend {
     border-radius: 0 0.25rem 0.25rem 0;
     &.outline { margin: 0 0 0 -1px; }
     &:not(.outline){ border-left: none; }
-    &.flat { padding: 0.25rem 0.75rem; }
+    &.flat {
+      padding: 0.25rem 0.75rem;
+      border-radius: 0 0.25rem 0.25rem 0;
+    }
     &.large, &.flat.large { padding: 0 1rem; }
   }
 }
