@@ -130,8 +130,7 @@
       svg { margin: 0; }
     }
 
-    &.flat {
-      border-radius: 0;
+    &.flat:not(.circle) {
       padding-left: 0;
       padding-right: 0;
     }

@@ -124,6 +124,7 @@ $buttons: (
 
 @mixin flat($default, $active, $hover) {
   border-color: transparent;
+  border-radius: 0.25rem;
   color: $default;
   fill: $default;
   background: transparent;
@@ -138,8 +139,8 @@ $buttons: (
 
   &:focus {
     box-shadow: none;
-    font-weight: bold;
     stroke: $hover;
+    background: rgba($default, 0.1);
   }
 
   &:active, &.active {

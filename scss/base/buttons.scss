@@ -18,10 +18,10 @@
   transition: all 0.3s ease-out;
   stroke: transparent;
   svg {
+    vertical-align: top;
     height: 1rem;
     width: 1rem;
     flex: 0 0 1rem;
-    transition: all 0.3s ease-out;
   }
 
   &::-moz-focus-inner {
