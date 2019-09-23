@@ -24,8 +24,7 @@
   &.invalid input,
   &.vf-touched.vf-invalid input {
     border-color: $neg-500;
-    outline: none;
-    box-shadow: none;
+    &:focus, &:active { border-color: $primary-500; }
   }
 }
 
@@ -241,9 +240,7 @@ legend {
       border-radius: 0.25rem;
       border: 1px solid transparent;
     }
-    &:focus + label {
-      box-shadow: 0 0 0 2px $white, 0 0 0 4px $bg-100;
-    }
+    &:focus + label { box-shadow: 0 0 0 0.25rem $white, 0 0 0 0.5rem $bg-100; }
     & + label:before { // outer circle/
       top: .75rem;
       left: .75rem;
