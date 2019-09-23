@@ -15,17 +15,21 @@
   background-color: $white;
   color: $neutral-900;
 
-  // basic invalid/error handling for text-inputs
+  // invalid/error handling for text-inputs
   // (vf-touched.vf-invalid for vue-form validator)
-  &:invalid:not(:required),
   &.invalid,
   &.vf-touched.vf-invalid {
     border-color: $neg-500;
     outline: none;
     box-shadow: none;
+    // added due to vf-touched.vf-invalid specificity
+    &:focus, &:active {
+      border-color: $primary-500;
+      outline: none;
+    }
   }
 
-  // basic state styling for for text-inputs
+  // state styling for for text-inputs
   &::placeholder {
     opacity: 0.7;
     color: $neutral-500;
@@ -156,8 +160,8 @@ input[type='search'] {
     margin: 0 0 0.75rem;
   }
 
-  &:focus + label { box-shadow: 0 0 0 0.25rem $white, 0 0 0 0.375rem $bg-100 }
-  // basic invalid/error handling for check-inputs
+  &:focus + label { box-shadow: 0 0 0 0.25rem $bg-100 }
+  // invalid/error handling for check-inputs
   &:invalid + label:before,
   &.invalid + label:before,
   &.vf-touched.vf-invalid + label:before {
