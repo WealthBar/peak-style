@@ -109,15 +109,23 @@ ul, ol {
 
 ul {
   list-style: none;
-  &.bullet { list-style: disc inside; }
+  &.bullet {
+    list-style: disc outside;
+    margin-left: 1.25rem;
+    li { margin-bottom: 0.25rem; }
+  }
 }
 
-ol { list-style: decimal inside; }
+ol {
+  list-style: decimal outside;
+  margin-left: 1.25rem;
+  li { margin-bottom: 0.25rem; }
+}
 
 li {
   ol, ul {
-    padding-left: 1rem;
-    margin: 0;
+    margin-top: 0.25rem;
+    margin-left: 1.25rem;
   }
 }
 

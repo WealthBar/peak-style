@@ -34,7 +34,7 @@ a, button, .link {
 
   &:focus {
     outline: none;
-    background: rgba(128, 128, 128, 0.2);
+    background: rgba($primary-500, 0.1);
   }
 
   &:visited {
@@ -103,11 +103,4 @@ a, button, .link {
     color: $neutral-500;
     cursor: default;
   }
-  // svg {
-  //   text-decoration: none;
-  //   height: 1.325rem;
-  //   width: 1.325rem;
-  //   margin-right: 0.5rem;
-  //   vertical-align: middle;
-  // }
 }
