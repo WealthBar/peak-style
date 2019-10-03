@@ -1,7 +1,35 @@
+@mixin variant($default, $active, $hover) {
+  color: $default;
+  fill: $default;
+
+  &:visited {
+    color: $default;
+    fill: $default;
+    svg { border-color: $default; }
+  }
+
+  &:focus {
+    outline: none;
+    background: rgba($default, 0.1);
+  }
+
+  &:hover, &:focus {
+    color: $hover;
+    fill: $hover;
+    svg { border-color: $hover; }
+  }
+
+  &:active, &.active {
+    color: $active;
+    fill: $active;
+    background: none;
+    svg { border-color: $active; }
+  }
+}
+
+
 a, button, .link {
   display: inline;
-  color: $primary-500;
-  fill: $primary-500;
   text-decoration: underline;
   font-weight: inherit;
   font-size: inherit;
@@ -11,7 +39,6 @@ a, button, .link {
   -moz-appearance: none;
   padding: 0;
   border: 0;
-  transition: all 300ms ease-out;
 
   &.icon svg {
     vertical-align: middle;
@@ -32,45 +59,7 @@ a, button, .link {
     padding: 0;
   }
 
-  &:focus {
-    outline: none;
-    background: rgba($primary-500, 0.1);
-  }
-
-  &:visited {
-    color: $primary-500;
-    fill: $primary-500;
-    svg { border-color: $primary-500; }
-  }
-
-  &:hover, &:focus {
-    color: $primary-900;
-    fill: $primary-900;
-    svg { border-color: $primary-900; }
-  }
-
-  &:active, &.active {
-    color: $primary-700;
-    fill: $primary-700;
-    background: none;
-    svg { border-color: $primary-700; }
-  }
-
-  @mixin variant($default, $active, $hover) {
-    color: $default;
-    fill: $default;
-
-    &:hover, &:focus {
-      color: $hover;
-      fill: $hover;
-    }
-
-    &:active, &.active {
-      color: $active;
-      fill: $active;
-    }
-  }
-
+  @include variant($primary-500, $primary-700, $primary-900);
   &.alt { @include variant($secondary-500, $secondary-300, $secondary-700); }
   &.alert { @include variant($tertiary-300, $tertiary-300, $tertiary-100); }
   &.neg { @include variant($neg-500, $neg-500, $neg-700); }
