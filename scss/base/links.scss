@@ -2,18 +2,20 @@
   color: $default;
   fill: $default;
 
-  &:visited {
+  &:visited,
+  &.visited {
     color: $default;
     fill: $default;
     svg { border-color: $default; }
   }
 
-  &:focus {
+  &:focus,
+  &.focus {
     outline: none;
     background: rgba($default, 0.1);
   }
 
-  &:hover, &:focus {
+  &:hover, &.hover, &:focus, &.focus {
     color: $hover;
     fill: $hover;
     svg { border-color: $hover; }

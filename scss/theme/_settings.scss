@@ -56,14 +56,14 @@ $buttons: (
   fill: $text;
   background: $default;
 
-  &:hover, &:focus {
+  &:hover, &.hover, &:focus, &.focus {
     border-color: transparent;
     color: $text;
     fill: $text;
     background: $hover;
   }
 
-  &:focus {
+  &:focus, &.focus {
     outline: none;
     box-shadow: 0 0 0 1px $text, 0 0 0 3px $hover;
   }
@@ -92,14 +92,14 @@ $buttons: (
   fill: $default;
   background: transparent;
 
-  &:hover, &:focus {
+  &:hover, &.hover, &:focus, &.focus {
     border-color: $hover;
     color: $text;
     fill: $text;
     background: $hover;
   }
 
-  &:focus {
+  &:focus, &.focus {
     outline: none;
     box-shadow: 0 0 0 1px $text, 0 0 0 3px $hover;
   }
@@ -131,13 +131,13 @@ $buttons: (
   padding: 0.375rem 0;
   font-weight: normal;
 
-  &:hover, &:focus {
+  &:hover, &.hover, &:focus, &.focus {
     border-color: transparent;
     color: $hover;
     fill: $hover;
   }
 
-  &:focus {
+  &:focus, &.focus {
     box-shadow: none;
     stroke: $hover;
     background: rgba($default, 0.1);
