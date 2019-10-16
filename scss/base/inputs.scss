@@ -23,7 +23,7 @@
     outline: none;
     box-shadow: none;
     // added due to vf-touched.vf-invalid specificity
-    &:focus, &:active {
+    &:focus, &.focus, &:active, &.active {
       border-color: $primary-500;
       outline: none;
     }
@@ -34,14 +34,14 @@
     opacity: 0.7;
     color: $neutral-500;
   }
-  &:focus, &:active {
+  &:focus, &.focus, &:active, &.active {
     border-color: $primary-500;
     outline: none;
   }
-  &:disabled {
+  &:disabled, &.disabled {
     background: $neutral-50;
     color: $neutral-300;
-    &:focus, &:active {
+    &:focus, &.focus, &:active, &.active {
       border-color: $neutral-300;
       outline: none;
     }
@@ -102,7 +102,7 @@ select {
   background-position: top 0.5rem right 0.25rem;
   background-size: 1rem;
   padding-right: 1.5rem;
-  &:disabled {
+  &:disabled, &.disabled {
     background-image: url(svg-dropdown($neutral-300));
     background-repeat: no-repeat;
     background-position: top 0.5rem right 0.25rem;
@@ -123,10 +123,10 @@ input[type='search'] {
   background-position: top 0.5rem left 0.25rem;
   background-size: 1rem;
   padding-left: 1.5rem;
-  &:focus, &:active {
+  &:focus, &.focus, &:active, &.active {
     background-image: url(svg-search($pos-500));
   }
-  &:disabled {
+  &:disabled, &.disabled {
     background-image: url(svg-search($neutral-300));
     background-repeat: no-repeat;
     background-position: top 0.5rem left 0.25rem;
@@ -160,7 +160,10 @@ input[type='search'] {
     margin: 0 0 0.75rem;
   }
 
-  &:focus + label { box-shadow: 0 0 0 0.125rem $bg-100 }
+  &:focus + label,
+  &.focus + label {
+    box-shadow: 0 0 0 0.125rem $bg-100;
+  }
   // invalid/error handling for check-inputs
   &:invalid + label:before,
   &.invalid + label:before,
@@ -193,33 +196,40 @@ input[type='checkbox'] {
   }
 
   &:hover + label:before,
-  &:focus + label:before {
+  &.hover + label:before,
+  &:focus + label:before,
+  &.focus + label:before {
     border-color: $primary-500;
   }
 
-  &:active + label:before {
+  &:active + label:before,
+  &.active + label:before {
     border-color: $primary-700;
   }
 }
 
 // ----- Checked Checkbox Styling ----- //
 
-input[type='checkbox']:checked {
+input[type='checkbox']:checked,
+input[type='checkbox'].checked {
   & + label:before {
     border-color: $primary-500;
     background-color: $primary-500;
   }
 
-  &:hover + label:before {
+  &:hover + label:before,
+  &.hover + label:before {
     border-color: $primary-700;
     background-color: $primary-700;
   }
 
-  &:focus + label:before {
+  &:focus + label:before,
+  &.focus + label:before {
     border-color: $primary-700;
   }
 
-  &:active + label:before {
+  &:active + label:before,
+  &.active + label:before {
     border-color: $primary-900;
     background-color: $primary-900;
   }
@@ -240,8 +250,11 @@ input[type="radio"] {
     margin: 0 0.75rem 0 0;
   }
   &:hover + label:before,
+  &.hover + label:before,
   &:focus + label:before,
-  &:checked + label:before { // outer circle when hovered, focused, or checked
+  &.focus + label:before,
+  &:checked + label:before,
+  &.checked + label:before { // outer circle when hovered, focused, or checked
     border: 1px solid $primary-500;
   }
 
@@ -259,14 +272,19 @@ input[type="radio"] {
   }
 
   &:focus + label:after,
-  &:checked + label:after { // inner circle when checked
+  &.focus + label:after,
+  &:checked + label:after,
+  &.checked + label:after { // inner circle when checked
     top: 0.25rem;
     left: 0.25rem;
     width: 0.75rem;
     height: 0.75rem;
     background: $primary-500;
   }
-  &:checked:hover {
+  &:checked:hover,
+  &:checked.hover,
+  &.checked:hover,
+  &.checked.hover {
     + label:before { border-color: $primary-700; }
     + label:after { background-color: $primary-700; }
   }
@@ -283,7 +301,8 @@ input[type=range] {
   border: none;
 }
 
-input[type=range]:focus {
+input[type=range]:focus,
+input[type=range].focus {
   outline: none;
 }
 
@@ -299,7 +318,8 @@ input[type=range]::-webkit-slider-thumb {
   margin-top: -0.375rem;
   box-shadow: 0 4px 10px rgba($black, 0.15), 0 0 0 1px $neutral-100;
 }
-input[type=range]:focus::-webkit-slider-thumb {
+input[type=range]:focus::-webkit-slider-thumb,
+input[type=range].focus::-webkit-slider-thumb {
   background: $neutral-50;
   border-color: $primary-500;
   box-shadow: 0 4px 10px rgba($black, 0.15);
@@ -325,7 +345,8 @@ input[type=range]::-moz-range-thumb {
   background: $primary-500;
   cursor: pointer;
 }
-input[type=range]:focus::-moz-range-thumb {
+input[type=range]:focus::-moz-range-thumb,
+input[type=range].focus::-moz-range-thumb {
   background: $neutral-50;
   border-color: $primary-500;
   box-shadow: 0 4px 10px rgba($black, 0.15);
@@ -352,7 +373,8 @@ input[type=range]::-ms-thumb {
   background: $primary-500;
   cursor: pointer;
 }
-input[type=range]:focus::-ms-thumb {
+input[type=range]:focus::-ms-thumb,
+input[type=range].focus::-ms-thumb {
   background: $neutral-50;
   border-color: $primary-500;
 }
@@ -374,12 +396,14 @@ input[type=range]::-ms-fill-upper {
   border-radius: 0.75rem;
 }
 
-input[type=range]:focus::-ms-fill-lower {
+input[type=range]:focus::-ms-fill-lower,
+input[type=range].focus::-ms-fill-lower {
   background: $primary-300;
   border: 1px solid $primary-300;
 }
 
-input[type=range]:focus::-ms-fill-upper {
+input[type=range]:focus::-ms-fill-upper,
+input[type=range].focus::-ms-fill-upper {
   border: 1px solid $primary-300;
 }
 

@@ -20,12 +20,12 @@
   // alert colour styling
   &.alert {
     @include fill($tertiary-100, $tertiary-100, $tertiary-300, $neutral-900);
-    &:focus { box-shadow: 0 0 0 1px $white, 0 0 0 3px $tertiary-300; }
+    &:focus, &.focus { box-shadow: 0 0 0 1px $white, 0 0 0 3px $tertiary-300; }
     &.outline {
       @include outline($tertiary-300, $tertiary-300, $tertiary-100, $neutral-900);
       color: $neutral-900;
       fill: $neutral-900;
-      &:focus { box-shadow: 0 0 0 1px $white, 0 0 0 3px $tertiary-300; }
+      &:focus, &.focus { box-shadow: 0 0 0 1px $white, 0 0 0 3px $tertiary-300; }
     }
     &.flat { @include flat($tertiary-300, $tertiary-300, $tertiary-100); }
   }
@@ -145,7 +145,7 @@
     fill: $neutral-900;
     background: $neutral-0;
 
-    &:hover, &:focus {
+    &:hover, &.hover, &:focus, &.focus {
       border-color: $neutral-300;
       color: $neutral-900;
       fill: $neutral-900;
@@ -168,6 +168,6 @@
       cursor: default;
       outline: none;
     }
-    &:focus { box-shadow: 0 0 0 1px $white, 0 0 0 3px $neutral-300; }
+    &:focus, &.focus { box-shadow: 0 0 0 1px $white, 0 0 0 3px $neutral-300; }
   }
 }
