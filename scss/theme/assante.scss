@@ -8,17 +8,17 @@ $blue-50: #dbf1ff;
 $blue-100: #72befb;
 $blue-300: #4792ee;
 $blue-500: #3175d3;
-$blue-700: #295da7;
+$blue-700: #2A5DA8;
 $blue-900: #16407d;
 
 $teal-50: #e2f6f2;
 $teal-100: #49d6ce;
-$teal-300: #00beb7;
+$teal-300: #50c2bd;
 $teal-500: #008084;
 $teal-700: #00646b;
 
 $yellow-50: #f7f2b8;
-$yellow-100: #f4e300;
+$yellow-100: #f2e208;
 $yellow-300: #e6c605;
 
 $sky-50: #eaf5fd;
@@ -31,7 +31,7 @@ $ruby-500: #d93939;
 $ruby-700: #b31a1a;
 
 $emerald-50: #e9f7e6;
-$emerald-300: #24b33b;
+$emerald-300: #2bb673;
 $emerald-500: #0a884e;
 $emerald-700: #086749;
 
@@ -63,9 +63,9 @@ $secondary-500: $teal-500;
 $secondary-700: $teal-700;
 
 $tertiary: $yellow-100;
-$tertiary-50: #f7f2b8;
-$tertiary-100: #f4e300;
-$tertiary-300: #e6c605;
+$tertiary-50: $yellow-50;
+$tertiary-100: $yellow-100;
+$tertiary-300: $yellow-300;
 
 $bg-50: $sky-50;
 $bg-100: $sky-100;
