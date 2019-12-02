@@ -124,7 +124,7 @@ input[type='search'] {
   background-size: 1rem;
   padding-left: 1.5rem;
   &:focus, &.focus, &:active, &.active {
-    background-image: url(svg-search($pos-500));
+    background-image: url(svg-search($primary-500));
   }
   &:disabled, &.disabled {
     background-image: url(svg-search($neutral-300));
