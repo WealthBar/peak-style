@@ -288,7 +288,6 @@ legend {
 // invalid/error handling for text-inputs
 // (vf-touched.vf-invalid for vue-form validator)
 #{$text-inputs} {
-  &:invalid:not(.vf-pristine),
   &.invalid,
   &.vf-touched.vf-invalid {
     border-color: $neg-500;
@@ -304,7 +303,6 @@ legend {
 
 // invalid/error handling for check-inputs
 #{$check-inputs} {
-  &:invalid:not(.vf-pristine),
   &.invalid,
   &.vf-touched.vf-invalid {
     + label:before { border-color: $neg-500; }
@@ -313,7 +311,6 @@ legend {
 
 // invalid/error handling for input class components
 .input {
-  &:invalid:not(.vf-pristine) input,
   &.invalid input,
   &.vf-touched.vf-invalid input {
     border-color: $neg-500;
@@ -323,7 +320,6 @@ legend {
 
 // invalid/error handling for fieldset
 .fieldset {
-  &:invalid:not(.vf-pristine),
   &.invalid,
   &.vf-touched.vf-invalid {
     border-color: $neg-500;
