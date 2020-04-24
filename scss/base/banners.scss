@@ -1,0 +1,23 @@
+.banner {
+  width: 100vw;
+  height: 3.44rem;
+  padding: 0.5rem 1.375rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $pearl-0;
+  border-bottom: 1px solid $pearl-100;
+
+  .banner-content {
+    width: 100%;
+    max-width: 80rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

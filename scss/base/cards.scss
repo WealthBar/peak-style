@@ -1,0 +1,43 @@
+.card {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem 2rem;
+
+  background-color: $white;
+
+  @media #{$screen-width-medium} {
+    max-width: 35rem;
+    border: 1px solid $neutral-100;
+  }
+
+  .card-body {
+
+  }
+
+  .card-actions {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin-top: 2rem;
+
+    [type=submit] {
+      margin-left: .5rem;
+    }
+  }
+}
+
+.content-box {
+  border: 1px solid lightgrey;
+  border-radius: .25rem;
+  padding: 1.5rem;
+  overflow-wrap: break-word;
+}
+
+.card-divider {
+  height: 1px;
+  background-color: lightgrey;
+  width: 100%;
+  margin: 1.5rem 0;
+}
