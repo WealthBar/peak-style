@@ -1,23 +1,31 @@
 .banner {
-  width: 100vw;
+  width: 100%;
   height: 3.44rem;
-  padding: 0.5rem 1.375rem;
 
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 
-  background-color: $pearl-0;
   border-bottom: 1px solid $pearl-100;
+  box-shadow: 0 2px 8px 0 rgba(55, 55, 63, 0.1);
+
+  &.light {
+    background-color: $pearl-0;
+  }
 
   .banner-content {
     width: 100%;
     max-width: 80rem;
+    padding: 0.5rem 3rem;
 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    * {
+      margin: 0;
+    }
   }
 }

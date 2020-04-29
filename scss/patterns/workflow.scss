@@ -1,27 +1,5 @@
-.workflow {
-  &.workflow-container {
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    background-color: $neutral-50;
-  }
-
-  .workflow-form {
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @media #{$screen-width-medium} {
-      margin-top: 6rem;
-    }
+.workflow-form {
+  @media #{$screen-width-medium} {
+    margin-top: 2rem;
   }
 }
