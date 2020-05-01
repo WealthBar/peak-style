@@ -43,17 +43,3 @@ $container-padding: 3rem;
   padding: 0.5rem $container-padding / 2;
   @media #{$screen-width-medium} { padding: 0.5rem $container-padding; }
 }
-
-.content-box {
-  border: 1px solid $neutral-100;
-  border-radius: .25rem;
-  padding: 1.5rem;
-  overflow-wrap: break-word;
-}
-
-.divider {
-  height: 1px;
-  background-color: $neutral-100;
-  width: 100%;
-  margin: 1.5rem 0;
-}

@@ -1,10 +1,19 @@
 .workflow {
   position: relative;
 
+  .workflow-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
   .step {
     position: absolute;
     top: 2.75rem;
     &.is-mobile-app { top: 0; }
+    width: 100%;
+    display: flex;
+    justify-content: center;
 
     &.step-animated {
       overflow-y: hidden;
