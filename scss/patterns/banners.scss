@@ -1,6 +1,6 @@
-.banner {
+.modal-page-banner {
   width: 100%;
-  height: 3.44rem;
+  height: 3.5rem;
 
   display: flex;
   flex-direction: row;
@@ -16,7 +16,7 @@
 
   .banner-content {
     width: 100%;
-    max-width: 80rem;
+    max-width: $xlarge-width;
     padding: 0.5rem 3rem;
 
     display: flex;
@@ -24,7 +24,8 @@
     align-items: center;
     justify-content: space-between;
 
-    * {
+    .title,
+    .action {
       margin: 0;
     }
   }

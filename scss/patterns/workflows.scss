@@ -1,5 +1,8 @@
 .workflow {
   position: relative;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
 
   .workflow-form {
     width: 100%;
@@ -9,162 +12,51 @@
 
   .step {
     position: absolute;
-    top: 2.75rem;
-    &.is-mobile-app { top: 0; }
+    top: 0;
+    &.is-app { top: 0; }
     width: 100%;
     display: flex;
     justify-content: center;
 
-    &.step-animated {
+    &.animated {
       overflow-y: hidden;
+    }
+
+    @media #{$screen-width-medium} {
+      top: 2.75rem;
     }
   }
 
   // ANIMATION //
-  .step-slide-fade-out-left {
-    animation: 0.5s ease-in-out 0s step-slide-out-left-mobile forwards;
-
-    @media #{$screen-width-medium} {
-      animation: 0.5s ease-in-out 0s step-slide-out-left-desktop forwards;
-    }
+  .slide-fade-out-left {
+    animation: 0.5s ease-in-out 0s slide-out-left forwards;
 
     .card {
-      animation: 0.5s ease-in-out 0s step-fade-out forwards;
+      animation: 0.5s ease-in-out 0s fade-out forwards;
     }
   }
 
-  .step-slide-fade-out-right {
-    animation: 0.5s ease-in-out 0s step-slide-out-right-mobile forwards;
-
-    @media #{$screen-width-medium} {
-      animation: 0.5s ease-in-out 0s step-slide-out-right-desktop forwards;
-    }
+  .slide-fade-out-right {
+    animation: 0.5s ease-in-out 0s slide-out-right forwards;
 
     .card {
-      animation: 0.5s ease-in-out 0s step-fade-out forwards;
+      animation: 0.5s ease-in-out 0s fade-out forwards;
     }
   }
 
-  .step-slide-fade-in-left {
-    animation: 0.5s ease-in-out 0s step-slide-in-left-mobile forwards;
-
-    @media #{$screen-width-medium} {
-      animation: 0.5s ease-in-out 0s step-slide-in-left-desktop forwards;
-    }
+  .slide-fade-in-left {
+    animation: 0.5s ease-in-out 0s slide-in-left forwards;
 
     .card {
-      animation: 0.5s ease-in-out 0s step-fade-in forwards;
+      animation: 0.5s ease-in-out 0s fade-in forwards;
     }
   }
 
-  .step-slide-fade-in-right {
-    animation: 0.5s ease-in-out 0s step-slide-in-right-mobile forwards;
-
-    @media #{$screen-width-medium} {
-      animation: 0.5s ease-in-out 0s step-slide-in-right-desktop forwards;
-    }
+  .slide-fade-in-right {
+    animation: 0.5s ease-in-out 0s slide-in-right forwards;
 
     .card {
-      animation: 0.5s ease-in-out 0s step-fade-in forwards;
-    }
-  }
-
-  @keyframes step-slide-out-left-mobile {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-
-  @keyframes step-slide-out-left-desktop {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-50% - 17.5rem));
-    }
-  }
-
-  @keyframes step-slide-out-right-mobile {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  }
-
-  @keyframes step-slide-out-right-desktop {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(50% + 17.5rem));
-    }
-  }
-
-  @keyframes step-slide-in-left-mobile {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes step-slide-in-left-desktop {
-    0% {
-      transform: translateX(calc(50% + 17.5rem));
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes step-slide-in-right-mobile {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes step-slide-in-right-desktop {
-    0% {
-      transform: translateX(calc(-50% - 17.5rem));
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes step-fade-in {
-    0% {
-      opacity: 0;
-    }
-    20% {
-      opacity: 0;
-    }
-    80% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes step-fade-out {
-    0% {
-      opacity: 1;
-    }
-    60% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
+      animation: 0.5s ease-in-out 0s fade-in forwards;
     }
   }
 }
