@@ -235,6 +235,10 @@ input[type="radio"] {
   &.checked + label:before { // outer circle when hovered, focused, or checked
     border: 1px solid $primary-500;
   }
+  &:active + label:before,
+  &.active + label:before {
+    border: 1px solid $primary-700;
+  }
 
   + label:after { // inner circle w/ no interaction
     content: "";
@@ -265,6 +269,11 @@ input[type="radio"] {
   &.checked.hover {
     + label:before { border-color: $primary-700; }
     + label:after { background-color: $primary-700; }
+  }
+  &:checked:active,
+  &:checked.active {
+    + label:before { border-color: $primary-900; }
+    + label:after { background-color: $primary-900; }
   }
 }
 
