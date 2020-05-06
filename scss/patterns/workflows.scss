@@ -18,10 +18,6 @@
     display: flex;
     justify-content: center;
 
-    &.animated {
-      overflow-y: hidden;
-    }
-
     @media #{$screen-width-medium} {
       top: 2.75rem;
     }
