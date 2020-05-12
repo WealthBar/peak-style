@@ -7,12 +7,9 @@
   align-items: center;
   justify-content: center;
 
+  background-color: $pearl-0;
   border-bottom: 1px solid $pearl-100;
   box-shadow: 0 2px 8px 0 rgba(55, 55, 63, 0.1);
-
-  &.light {
-    background-color: $pearl-0;
-  }
 
   .banner-content {
     width: 100%;
