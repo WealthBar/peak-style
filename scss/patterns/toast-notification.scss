@@ -1,0 +1,35 @@
+.toast-notification {
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  top: 0.75rem;
+
+  width: calc(100% - 1rem);
+  max-width: 40rem;
+
+  z-index: 1000;
+
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  border-left: $neg-300 0.25rem solid;
+
+  background-color: $neg-50;
+  box-shadow: 2px 2px 4px 0 rgba(0,0,0,.2);
+
+  > div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .close-button.dark.flat {
+    margin-left: 1.5rem;
+    padding: 0;
+  }
+}
