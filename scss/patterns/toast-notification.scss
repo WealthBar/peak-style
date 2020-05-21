@@ -1,4 +1,4 @@
-.toast-notification {
+.toast {
   position: absolute;
   left: 0.5rem;
   right: 0.5rem;
@@ -8,7 +8,9 @@
   max-width: 40rem;
 
   z-index: 1000;
+}
 
+.notice {
   margin: 0 auto;
   padding: 1rem 1.5rem;
 
@@ -16,10 +18,13 @@
   align-items: center;
   border: 1px solid transparent;
   border-radius: 0.25rem;
-  border-left: $neg-300 0.25rem solid;
 
-  background-color: $neg-50;
   box-shadow: 2px 2px 4px 0 rgba(0,0,0,.2);
+
+  &.neg {
+    border-left: $neg-300 0.25rem solid;
+    background-color: $neg-50;
+  }
 
   > div {
     display: flex;

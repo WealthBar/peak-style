@@ -19,13 +19,3 @@
     opacity: 1;
   }
 }
-
-.fade-in-slide-down {
-  animation-duration: 0.3s;
-  animation-name: slide-down, fade-in;
-  animation-timing-function: ease;
-}
-
-.fade-in-slide-down-reverse {
-  animation-direction: reverse;
-}
