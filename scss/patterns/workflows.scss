@@ -13,7 +13,7 @@
   .step {
     position: absolute;
     top: 0;
-    &.is-app { top: 0; }
+    &.no-banner { top: 0; }
     width: 100%;
     display: flex;
     justify-content: center;
