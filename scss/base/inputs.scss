@@ -25,7 +25,7 @@
   }
   &:disabled, &.disabled {
     background: $neutral-50;
-    color: $neutral-300;
+    color: lighten($neutral-700, 0.9);
     &:focus, &.focus, &:active, &.active {
       border-color: $neutral-300;
       outline: none;
