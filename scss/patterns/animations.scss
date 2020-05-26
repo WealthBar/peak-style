@@ -1,0 +1,9 @@
+.reverse {
+  animation-direction: reverse;
+}
+
+.fade-in-slide-down {
+  animation-duration: 0.3s;
+  animation-name: slide-down, fade-in;
+  animation-timing-function: ease;
+}
