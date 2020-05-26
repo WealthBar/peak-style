@@ -19,7 +19,7 @@
   border: 1px solid transparent;
   border-radius: 0.25rem;
 
-  box-shadow: 2px 2px 4px 0 rgba(0,0,0,.2);
+  box-shadow: 2px 2px 4px 0 rgba($neutral-900, .2);
 
   &.neg {
     border-left: $neg-300 0.25rem solid;
