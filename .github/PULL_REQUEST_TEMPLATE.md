@@ -21,3 +21,8 @@
 - [ ] Visually review significant UI changes
 - [ ] Assign @pez-wb as reviewer if needed
 - [ ] Assign back to submitter with feedback
+
+
+### Post Merge:
+
+- [ ] run `npm publish --access public` from `master` branch to update Package
