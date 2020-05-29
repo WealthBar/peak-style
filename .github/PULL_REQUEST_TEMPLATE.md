@@ -16,7 +16,7 @@
 
 <!-- Remove anything that is not relevant -->
 
-- [ ] pre-built CSS with changes are in PR
+- [ ] pre-built CSS files using `yarn run css` are in PR
 - [ ] Version bump in package.json
 - [ ] Visually review significant UI changes
 - [ ] Assign @pez-wb as reviewer if needed
