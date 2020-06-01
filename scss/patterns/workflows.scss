@@ -13,13 +13,25 @@
   .step {
     position: absolute;
     top: 0;
-    &.no-banner { top: 0; }
     width: 100%;
     display: flex;
     justify-content: center;
 
     @media #{$screen-width-medium} {
       top: 2.75rem;
+      &.no-banner { top: 0; }
+    }
+
+    .card {
+      &:first-child {
+        width: 100%;
+
+        @media #{$screen-max-small} {
+          max-width: none;
+          border-radius: none;
+          border: none;
+        }
+      }
     }
   }
 

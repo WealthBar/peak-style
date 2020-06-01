@@ -1,4 +1,4 @@
-.modal-page-banner {
+.banner {
   width: 100%;
   height: 3.5rem;
 
@@ -7,23 +7,30 @@
   align-items: center;
   justify-content: center;
 
-  background-color: $pearl-0;
   border-bottom: 1px solid $pearl-100;
   box-shadow: 0 2px 8px 0 rgba(55, 55, 63, 0.1);
 
-  .banner-content {
-    width: 100%;
-    max-width: $xlarge-width;
-    padding: 0.5rem 3rem;
+  &.flat {
+    box-shadow: none;
+  }
+}
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+.modal-page-banner {
+  background-color: $pearl-0;
+}
 
-    .title,
-    .action {
-      margin: 0;
-    }
+.banner-content {
+  width: 100%;
+  max-width: $xlarge-width;
+  padding: 0.5rem 3rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .banner-title,
+  .banner-actions {
+    margin: 0;
   }
 }

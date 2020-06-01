@@ -1,41 +1,55 @@
+@mixin card-size($multiplier) {
+  .card-header,
+  .card-body,
+  .card-footer {
+    margin: 1.5rem * $multiplier 2rem * $multiplier;;
+  }
+}
+
 .card {
-  width: 100%;
   height: auto;
-  padding: 1.5rem 2rem;
-  border-radius: 0.25rem;
   background-color: $white;
+  display: inline-block;
+  overflow-wrap: break-word;
 
-  @media #{$screen-width-medium} {
-    max-width: 35rem;
-    border: 1px solid $neutral-100;
+  max-width: 35rem;
+  border-radius: 0.25rem;
+  border: 1px solid $neutral-100;
+
+  @include card-size(1);
+
+  &.small {
+    @include card-size(.50);
   }
 
-  .card-body {
-    .content-box {
-      border: 1px solid $neutral-100;
-      border-radius: .25rem;
-      padding: 1.5rem;
-      overflow-wrap: break-word;
-    }
-
-    .divider {
-      height: 1px;
-      background-color: $neutral-100;
-      width: 100%;
-      margin: 1.5rem 0;
-    }
+  &.x-small {
+    @include card-size(.25)
   }
 
-  .card-actions {
+  .card-header *:first-child {
+    margin: 0;
+  }
+
+  .card-footer {
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
     align-items: center;
 
-    margin-top: 2rem;
-
     [type=submit] {
       margin-left: .5rem;
     }
+  }
+
+  &.full {
+    width: 100%;
+  }
+
+  &.accent {
+    background-color: $bg-100;
+  }
+
+  .no-border {
+    border: none;
   }
 }
