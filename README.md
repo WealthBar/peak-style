@@ -13,14 +13,14 @@ A `theme` file is required to be `@import`-ed prior to the other style files. Th
 **example:**
 
 ```
-@import '~@wealthbar/peak-style/scss/_theme/wealthbar';
+@import '~@wealthbar/peak-style/s/scss/theme/wealthbar';
 @import '~@wealthbar/peak-style/scss/base/index';
 @import '~@wealthbar/peak-style/scss/patterns/index';
 ```
 **OR** to load both `base` and `patterns` in one shot:
 
 ```
-@import '~@wealthbar/peak-style/scss/_theme/wealthbar';
+@import '~@wealthbar/peak-style/s/scss/theme/wealthbar';
 @import '~@wealthbar/peak-style/scss/index';
 ```
 

@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
     - name: build css files
@@ -16,12 +16,13 @@ jobs:
           yarn run css
 
   publish:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
+    needs: build
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
-          node-version: 10
+          node-version: 11.x
       - run: npm install
       - run: npm test
       - uses: JS-DevTools/npm-publish@v1
