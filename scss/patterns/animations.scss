@@ -7,3 +7,35 @@
   animation-name: slide-down, fade-in;
   animation-timing-function: ease;
 }
+
+.slide-fade-out-left {
+  animation: 0.5s ease-in-out 0s slide-out-left forwards;
+
+  > div:first-child {
+    animation: 0.5s ease-in-out 0s fade-out forwards;
+  }
+}
+
+.slide-fade-out-right {
+  animation: 0.5s ease-in-out 0s slide-out-right forwards;
+
+  > div:first-child {
+    animation: 0.5s ease-in-out 0s fade-out forwards;
+  }
+}
+
+.slide-fade-in-left {
+  animation: 0.5s ease-in-out 0s slide-in-left forwards;
+
+  > div:first-child {
+    animation: 0.5s ease-in-out 0s fade-in forwards;
+  }
+}
+
+.slide-fade-in-right {
+  animation: 0.5s ease-in-out 0s slide-in-right forwards;
+
+  > div:first-child {
+    animation: 0.5s ease-in-out 0s fade-in forwards;
+  }
+}

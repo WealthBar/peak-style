@@ -32,7 +32,7 @@
 @media #{$screen-width-medium} {
   @keyframes slide-in-left {
     0% {
-      transform: translateX(calc(50%));
+      transform: translateX(calc(50% + 17.5rem));
     }
     100% {
       transform: translateX(0);
@@ -56,7 +56,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(50%));
+      transform: translateX(calc(50% + 17.5rem));
     }
   }
 }

@@ -17,6 +17,29 @@
     display: flex;
     justify-content: center;
 
+    max-width: $small-width;
+
+    .card-header,
+    .card-body,
+    .card-footer {
+      margin: 1.5rem 2rem;
+    }
+
+    .card-header *:first-child {
+      margin: 0;
+    }
+
+    .card-footer {
+      display: flex;
+      flex-grow: 1;
+      justify-content: flex-end;
+      align-items: center;
+
+      [type=submit] {
+        margin-left: .5rem;
+      }
+    }
+
     @media #{$screen-width-medium} {
       top: 2.75rem;
       &.no-banner { top: 0; }
@@ -32,39 +55,6 @@
           border: none;
         }
       }
-    }
-  }
-
-  // ANIMATION //
-  .slide-fade-out-left {
-    animation: 0.5s ease-in-out 0s slide-out-left forwards;
-
-    .card {
-      animation: 0.5s ease-in-out 0s fade-out forwards;
-    }
-  }
-
-  .slide-fade-out-right {
-    animation: 0.5s ease-in-out 0s slide-out-right forwards;
-
-    .card {
-      animation: 0.5s ease-in-out 0s fade-out forwards;
-    }
-  }
-
-  .slide-fade-in-left {
-    animation: 0.5s ease-in-out 0s slide-in-left forwards;
-
-    .card {
-      animation: 0.5s ease-in-out 0s fade-in forwards;
-    }
-  }
-
-  .slide-fade-in-right {
-    animation: 0.5s ease-in-out 0s slide-in-right forwards;
-
-    .card {
-      animation: 0.5s ease-in-out 0s fade-in forwards;
     }
   }
 }

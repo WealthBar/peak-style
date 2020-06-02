@@ -1,55 +1,8 @@
-@mixin card-size($multiplier) {
-  .card-header,
-  .card-body,
-  .card-footer {
-    margin: 1.5rem * $multiplier 2rem * $multiplier;;
-  }
-}
-
 .card {
   height: auto;
   background-color: $white;
   display: inline-block;
-  overflow-wrap: break-word;
 
-  max-width: 35rem;
   border-radius: 0.25rem;
   border: 1px solid $neutral-100;
-
-  @include card-size(1);
-
-  &.small {
-    @include card-size(.50);
-  }
-
-  &.x-small {
-    @include card-size(.25)
-  }
-
-  .card-header *:first-child {
-    margin: 0;
-  }
-
-  .card-footer {
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-end;
-    align-items: center;
-
-    [type=submit] {
-      margin-left: .5rem;
-    }
-  }
-
-  &.full {
-    width: 100%;
-  }
-
-  &.accent {
-    background-color: $bg-100;
-  }
-
-  .no-border {
-    border: none;
-  }
 }
