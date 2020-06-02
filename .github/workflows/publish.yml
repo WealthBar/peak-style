@@ -6,25 +6,24 @@ on:
       - master
 
 jobs:
-  build:
+  jobs:
+  build_publish:
     runs-on: ubuntu-18.04
     steps:
-    - uses: actions/checkout@v2
-    - name: build css files
-      run: |
+      - name: Build css resources
+        uses: actions/checkout@v2
+        run: |
           yarn install
           yarn run css
-
-  publish:
-    runs-on: ubuntu-18.04
-    needs: build
-    steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - name: Commit css resources
+        run: |
+          git add -a
+          git commit -m 'Automated - build css files'
+      - name: Configure NPM
+        run: |
+          npm install
+          npm test
+      - name: Publish package
+        uses: JS-DevTools/npm-publish@v1
         with:
-          node-version: 11.x
-      - run: npm install
-      - run: npm test
-      - uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_AUTH_TOKEN }}
+          token: ${{ secrets.NPM_AUTH_TOKEN }
