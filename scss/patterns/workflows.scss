@@ -22,7 +22,7 @@
     .step-header,
     .step-body,
     .step-footer {
-      margin: 0 1.5rem 2rem 1.5rem;
+      margin: 0 1.5rem 2rem;
     }
 
     .card-footer {
@@ -38,18 +38,19 @@
 
     @media #{$screen-width-medium} {
       top: 2.75rem;
-      &.no-banner { top: 0; }
+
+      &.no-banner {
+        top: 0;
+      }
     }
 
-    .card {
-      &:first-child {
-        width: 100%;
+    .card &:first-child {
+      width: 100%;
 
-        @media #{$screen-max-small} {
-          max-width: none;
-          border-radius: none;
-          border: none;
-        }
+      @media #{$screen-max-small} {
+        max-width: none;
+        border-radius: none;
+        border: none;
       }
     }
   }
