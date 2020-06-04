@@ -1,29 +1,45 @@
+name: Build, Commit and Publish
 
-name: Build and Publish
 on:
   push:
     branches:
       - master
 
 jobs:
-  jobs:
-  build_publish:
+  build_commit:
+    name: Build and commit CSS
     runs-on: ubuntu-18.04
     steps:
-      - name: Build css resources
+      - name: Checkout repo
         uses: actions/checkout@v2
+
+      - name: Build css resources
         run: |
           yarn install
           yarn run css
-      - name: Commit css resources
-        run: |
-          git add -a
-          git commit -m 'Automated - build css files'
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v4
+        with:
+          author_name: CyberNathan
+          author_email: developers@wealthbar.com
+          message: "Built CSS files"
+          add: "*.css"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  publish_to_npm:
+    name: Publish NPM Package
+    runs-on: ubuntu-18.04
+    needs: build_commit
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
       - name: Configure NPM
         run: |
           npm install
           npm test
-      - name: Publish package
+      - name: Publish npm package
         uses: JS-DevTools/npm-publish@v1
         with:
-          token: ${{ secrets.NPM_AUTH_TOKEN }
+          token: ${{ secrets.NPM_AUTH_TOKEN }}
