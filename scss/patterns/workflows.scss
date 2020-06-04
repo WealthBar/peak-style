@@ -16,9 +16,7 @@
     width: 100%;
     max-width: $small-width;
 
-    &.card:first-child {
-      width: 100%;
-
+    &.card {
       @media #{$screen-max-small} {
         max-width: none;
         border-radius: none;
