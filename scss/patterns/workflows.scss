@@ -14,12 +14,7 @@
     position: absolute;
     top: 0;
     width: 100%;
-    display: flex;
     max-width: $small-width;
-
-    .card {
-      width: 100%;
-    }
 
     .step-header,
     .step-body,
