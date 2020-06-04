@@ -16,13 +16,23 @@
     width: 100%;
     max-width: $small-width;
 
-    .step-header,
-    .step-body,
-    .step-footer {
+    &.card:first-child {
+      width: 100%;
+
+      @media #{$screen-max-small} {
+        max-width: none;
+        border-radius: none;
+        border: none;
+      }
+    }
+
+    header,
+    article,
+    footer {
       margin: 1.5rem 2rem;
     }
 
-    .step-footer {
+    footer {
       display: flex;
       flex-grow: 1;
       justify-content: flex-end;
@@ -38,16 +48,6 @@
 
       &.no-banner {
         top: 0;
-      }
-    }
-
-    .step &:first-child {
-      width: 100%;
-
-      @media #{$screen-max-small} {
-        max-width: none;
-        border-radius: none;
-        border: none;
       }
     }
   }
