@@ -7,4 +7,12 @@
   footer {
     margin: 1.5rem 2rem;
   }
+
+  &.card {
+    @media #{$screen-max-small} {
+      max-width: none;
+      border-radius: none;
+      border: none;
+    }
+  }
 }

@@ -13,22 +13,6 @@
   .step {
     position: absolute;
     top: 0;
-    width: 100%;
-    max-width: $small-width;
-
-    &.card {
-      @media #{$screen-max-small} {
-        max-width: none;
-        border-radius: none;
-        border: none;
-      }
-    }
-
-    header,
-    article,
-    footer {
-      margin: 1.5rem 2rem;
-    }
 
     footer {
       display: flex;
