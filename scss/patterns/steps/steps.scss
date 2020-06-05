@@ -1,6 +1,7 @@
 .step {
   width: 100%;
-  max-width: $small-width;
+  border-width: 0;
+  max-width: none;
 
   header,
   article,
@@ -8,10 +9,8 @@
     margin: 1.5rem 2rem;
   }
 
-  // If a border is applied to a
-  // step, it is removed here to
-  // allow the step to be fullscreen
-  @media #{$screen-max-small} {
-    border: none;
+  @media #{$screen-width-medium} {
+    border-width: 1px;
+    max-width: $small-width;
   }
 }
