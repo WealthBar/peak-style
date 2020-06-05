@@ -8,11 +8,10 @@
     margin: 1.5rem 2rem;
   }
 
-  &.card {
-    @media #{$screen-max-small} {
-      max-width: none;
-      border-radius: none;
-      border: none;
-    }
+  // If a border is applied to a
+  // step, it is removed here to
+  // allow the step to be fullscreen
+  @media #{$screen-max-small} {
+    border: none;
   }
 }
