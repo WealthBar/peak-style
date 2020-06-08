@@ -4,4 +4,12 @@
   display: inline-block;
   border-radius: 0.25rem;
   border: 1px solid $neutral-100;
+
+  &.step {
+    border-width: 0;
+
+    @media #{$screen-width-medium} {
+      border-width: 1px;
+    }
+  }
 }

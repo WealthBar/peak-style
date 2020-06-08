@@ -1,7 +1,6 @@
 .step {
   width: 100%;
   border-width: 0;
-  max-width: none;
 
   header,
   article,
@@ -10,7 +9,6 @@
   }
 
   @media #{$screen-width-medium} {
-    border-width: 1px;
     max-width: $small-width;
   }
 }
