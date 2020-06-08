@@ -1,0 +1,21 @@
+.step {
+  &.step-slide-fade-out-left {
+    animation: 0.5s ease-in-out 0s step-slide-out-left forwards,
+      0.5s ease-in-out 0s step-fade-out forwards;
+  }
+
+  &.step-slide-fade-out-right {
+    animation: 0.5s ease-in-out 0s step-slide-out-right forwards,
+      0.5s ease-in-out 0s step-fade-out forwards;
+  }
+
+  &.step-slide-fade-in-left {
+    animation: 0.5s ease-in-out 0s step-slide-in-left forwards,
+      0.5s ease-in-out 0s step-fade-in forwards;
+  }
+
+  &.step-slide-fade-in-right {
+    animation: 0.5s ease-in-out 0s step-slide-in-right forwards,
+      0.5s ease-in-out 0s step-fade-in forwards;
+  }
+}

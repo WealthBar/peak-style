@@ -1,0 +1,34 @@
+// this variable lives here as it is to ONLY be used by containers.
+$container-padding: 3rem;
+
+.container {
+  width: 100%;
+  max-width: $xlarge-width + ($container-padding * 2); // add in padding to account for it in width of container.
+  margin: 0 auto;
+  padding: 0 $container-padding / 2;
+  @media #{$screen-width-medium} { padding: 0 $container-padding; }
+}
+
+.container-large {
+  width: 100%;
+  max-width: $large-width + ($container-padding * 2); // add in padding to account for it in width of container.
+  margin: 0 auto;
+  padding: 0 $container-padding / 2;
+  @media #{$screen-width-medium} { padding: 0 $container-padding; }
+}
+
+.container-medium {
+  width: 100%;
+  max-width: $medium-width + ($container-padding * 2); // add in padding to account for it in width of container.
+  margin: 0 auto;
+  padding: 0 $container-padding / 2;
+  @media #{$screen-width-medium} { padding: 0 $container-padding; }
+}
+
+.container-small {
+  width: 100%;
+  max-width: $small-width + ($container-padding * 2); // add in padding to account for it in width of container.
+  margin: 0 auto;
+  padding: 0 $container-padding / 2;
+  @media #{$screen-width-small} { padding: 0 $container-padding; }
+}

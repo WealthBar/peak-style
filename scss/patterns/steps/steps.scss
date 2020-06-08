@@ -1,0 +1,13 @@
+.step {
+  width: 100%;
+
+  header,
+  article,
+  footer {
+    margin: 1.5rem 2rem;
+  }
+
+  @media #{$screen-width-medium} {
+    max-width: $small-width;
+  }
+}

@@ -1,0 +1,36 @@
+.banner {
+  width: 100%;
+  height: 3.5rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  border-bottom: 1px solid $neutral-100;
+  box-shadow: 0 2px 8px 0 rgba(55, 55, 63, 0.1);
+
+  &.flat {
+    box-shadow: none;
+  }
+}
+
+.modal-page-banner {
+  background-color: $white;
+}
+
+.banner-content {
+  width: 100%;
+  max-width: $xlarge-width;
+  padding: 0.5rem 3rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .banner-title,
+  .banner-actions {
+    margin: 0;
+  }
+}
