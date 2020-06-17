@@ -12,9 +12,7 @@
     display: block;
     bottom: -1px; // bring each tab in line with the tabs border
     margin-right: 1rem;
-    transition: background-color 0.2s ease-in-out;
-    transition: color 0.2s ease-in-out;
-    transition: border-bottom 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
 
     &:hover {
       color: $primary-500;
