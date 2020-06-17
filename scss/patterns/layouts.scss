@@ -5,3 +5,35 @@
 
   background-color: $neutral-50;
 }
+
+// Notice UI
+
+.notice {
+  display: table;
+  margin: 0 0 1rem;
+  padding: 0 1.5rem;
+  border-radius: 0.25rem;
+  border-left: $bg-100 0.25rem solid;
+  background-color: $bg-50;
+  color: $neutral-900;
+  &.neg {
+    border-color: $neg-300;
+    background-color: $neg-50;
+  }
+  &.alert {
+    border-color: $tertiary-100;
+    background-color: $tertiary-50;
+  }
+  &.light {
+    border-color: $neutral-300;
+    background-color: $neutral-50;
+  }
+  &.alt {
+    border-color: $secondary-300;
+    background-color: $secondary-50;
+  }
+  .notice-content,
+  article, header, footer {
+    margin: 1rem 0;
+  }
+}
