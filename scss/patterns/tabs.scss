@@ -7,13 +7,19 @@
   .tab {
     color: $neutral-700;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid $neutral-100;
+    border-bottom: 1px solid $neutral-100; // redundant with container border, but prevents height flicker
     text-decoration: none;
     display: block;
     bottom: -1px; // bring each tab in line with the tabs border
     margin-right: 1rem;
-    &:hover:not(.active, .disabled) {
-      color: $primary-300;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
+
+    &:hover {
+      color: $primary-500;
+    }
+
+    &:focus {
+      background-color: $bg-50;
     }
 
     &.active {
