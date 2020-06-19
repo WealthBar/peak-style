@@ -7,6 +7,11 @@
     margin: 1.25rem 1.5rem;
   }
 
+  footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
   @media #{$screen-width-medium} {
     max-width: $small-width;
 
