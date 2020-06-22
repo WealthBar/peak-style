@@ -20,14 +20,18 @@
 }
 
 .banner-content {
-  width: 100%;
-  max-width: $xlarge-width;
-  padding: 0.5rem 3rem;
-
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+  width: 100%;
+  max-width: $xlarge-width;
+  margin: 0 1.25rem;
+
+  @media #{screen-width-medium} {
+    margin: 0 3rem;
+  }
 
   .banner-title,
   .banner-actions {

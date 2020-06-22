@@ -4,10 +4,21 @@
   header,
   article,
   footer {
-    margin: 1.5rem 2rem;
+    margin: 1.25rem 1.5rem;
+  }
+
+  footer {
+    display: flex;
+    justify-content: flex-end;
   }
 
   @media #{$screen-width-medium} {
     max-width: $small-width;
+
+    header,
+    article,
+    footer {
+      margin: 1.5rem  2.5rem;
+    }
   }
 }
