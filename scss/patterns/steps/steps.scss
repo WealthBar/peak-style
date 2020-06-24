@@ -1,23 +1,29 @@
 .step {
   width: 100%;
 
-  header,
-  article,
-  footer {
+  > header,
+  > article,
+  > footer {
     margin: 1.25rem 1.5rem;
   }
 
-  footer {
+  > footer {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+
+    button:last-child {
+      margin-left: .5rem;
+    }
   }
 
   @media #{$screen-width-medium} {
     max-width: $small-width;
 
-    header,
-    article,
-    footer {
+    > header,
+    > article,
+    > footer {
       margin: 1.5rem  2.5rem;
     }
   }
