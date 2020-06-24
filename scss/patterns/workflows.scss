@@ -14,17 +14,6 @@
     position: absolute;
     top: 0;
 
-    footer {
-      display: flex;
-      flex-grow: 1;
-      justify-content: flex-end;
-      align-items: center;
-
-      [type=submit] {
-        margin-left: .5rem;
-      }
-    }
-
     @media #{$screen-width-medium} {
       top: 2.75rem;
 
