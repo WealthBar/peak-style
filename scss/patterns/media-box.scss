@@ -1,0 +1,32 @@
+.media_box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  
+  .main {
+    display: flex;
+    flex-direction: row;
+
+    .icon {
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 1rem 1rem;
+    }
+
+    .content {
+      margin: 0 0 0 0.75rem;
+    }
+  }
+
+  .body {
+    margin: 1rem 0 0 2.75rem;
+    border-left: 1px solid $neutral-100;
+    padding-left: 1rem;
+  }
+}
