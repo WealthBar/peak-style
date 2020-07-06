@@ -1,0 +1,74 @@
+table {
+  width: 100%;
+  display: table;
+  table-layout: auto;
+
+  thead {
+    font-weight: bold;
+    border-bottom: 1px solid $neutral-300;
+    font-size: 14px;
+  }
+
+  tfoot {
+    font-weight: bold;
+    border-top: 1px solid $neutral-300;
+  }
+
+  tr {
+    border-bottom: 1px solid $neutral-100;
+    transition: background-color 200ms ease-in-out;
+    &:last-child { border-bottom: none; }
+    &:hover { background-color: $neutral-50 }
+  }
+  
+  th, td { padding: 0.5rem 0 0.5rem 0.5rem; }
+  th:first-child, td:first-child { padding-left: 1rem; }
+  th:last-child, td:last-child { padding-right: 1rem; }
+  
+  svg { transition: fill 200ms ease-in-out; }
+
+  // COLUMN VARIANT - right-aligned text
+  // this class can be applied to any <th> or <td>
+  .right {
+    text-align: right;
+  }
+
+  // ROW VARIANT - bold text
+  // intended for use on a row to create a 'total' or 'summary' row style with bold text
+  .bold {
+    font-weight: bold;
+  }
+
+  // ROW VARIANT - hyperlink
+  // this can be applied to any <tr> to add hover styles that indiate the row is a link
+  .link-row {
+    td {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+
+    &:hover {
+      background-color: $bg-50;
+      cursor: pointer;
+
+      // TEXT VARIANT - hyperlink
+      // applying .link-row-target to a string will give it a link-like appearance
+      // when the mouse is hovered anywhere over the containing row
+      .link-row-target {
+        color: $primary-500; // targeting text
+        fill: $primary-500; // targeting SVG
+        transition: color 200ms ease-in-out;
+        .subtle {
+          color: $primary-500;
+          transition: color 200ms ease-in-out;
+        }
+      }
+    }
+  }
+
+  // TABLE VARIANT - smaller text
+  // this class can be applied to the <table> to shrink all text in the table
+  &.text-small {
+    font-size: 0.875rem;
+  }
+}
