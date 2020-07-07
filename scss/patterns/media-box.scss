@@ -31,7 +31,8 @@
     padding-left: 1rem;
 
     p {
-      white-space: pre;
+      white-space: pre-line;
+      word-break: break-word;
     }
   }
   
