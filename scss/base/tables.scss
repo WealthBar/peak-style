@@ -2,23 +2,30 @@ table {
   width: 100%;
   display: table;
   table-layout: auto;
+  border-collapse: separate; // this is necessary to allow border-radius
+  background-color: $white;
+  border-radius: 0.25rem;
+  border: 1px solid $neutral-100;
 
-  thead { border-bottom: 1px solid $neutral-300; }
   thead, th {
     font-weight: bold;
     font-size: 14px;
+    border-bottom: 1px solid $neutral-300;
+  }
+
+  tbody tr {
+    transition: background-color 200ms ease-in-out;
+    &:hover { background-color: $neutral-50; }
+
+    td { border-bottom: 1px solid $neutral-100; }
+    &:last-child td { border-bottom: none; }
   }
 
   tfoot {
     font-weight: bold;
-    border-top: 1px solid $neutral-300;
-  }
-
-  tbody tr {
-    border-bottom: 1px solid $neutral-100;
+    td { border-top: 1px solid $neutral-300; }
     transition: background-color 200ms ease-in-out;
-    &:last-child { border-bottom: none; }
-    &:hover { background-color: $neutral-50 }
+    tr:hover { background-color: $neutral-50; }
   }
   
   th, td { padding: 0.5rem; }
@@ -58,5 +65,10 @@ table {
   // this class can be applied to the <table> to shrink all text in the table
   &.text-small {
     font-size: 0.875rem;
+  }
+
+  // TABLE VARIANT - add box-shadow
+  &.shadow {
+    box-shadow: 0 0.25rem 0.5rem rgba($neutral-500, 0.2);
   }
 }
