@@ -3,9 +3,9 @@ table {
   display: table;
   table-layout: auto;
 
-  thead {
+  thead { border-bottom: 1px solid $neutral-300; }
+  thead, th {
     font-weight: bold;
-    border-bottom: 1px solid $neutral-300;
     font-size: 14px;
   }
 
@@ -14,30 +14,18 @@ table {
     border-top: 1px solid $neutral-300;
   }
 
-  tr {
+  tbody tr {
     border-bottom: 1px solid $neutral-100;
     transition: background-color 200ms ease-in-out;
     &:last-child { border-bottom: none; }
     &:hover { background-color: $neutral-50 }
   }
   
-  th, td { padding: 0.5rem 0 0.5rem 0.5rem; }
+  th, td { padding: 0.5rem; }
   th:first-child, td:first-child { padding-left: 1rem; }
   th:last-child, td:last-child { padding-right: 1rem; }
   
   svg { transition: fill 200ms ease-in-out; }
-
-  // COLUMN VARIANT - right-aligned text
-  // this class can be applied to any <th> or <td>
-  .right {
-    text-align: right;
-  }
-
-  // ROW VARIANT - bold text
-  // intended for use on a row to create a 'total' or 'summary' row style with bold text
-  .bold {
-    font-weight: bold;
-  }
 
   // ROW VARIANT - hyperlink
   // this can be applied to any <tr> to add hover styles that indiate the row is a link
