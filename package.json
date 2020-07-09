@@ -1,6 +1,6 @@
 {
   "name": "@wealthbar/peak-style",
-  "version": "1.7.5",
+  "version": "1.7.6",
   "description": "Base and Pattern styles for Peak Design System",
   "main": "scss/index.scss",
   "scripts": {
