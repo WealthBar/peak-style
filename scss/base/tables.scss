@@ -34,16 +34,22 @@ table {
   
   svg { transition: fill 200ms ease-in-out; }
 
-  // ROW VARIANT - hyperlink
-  // this can be applied to any <tr> to add hover styles that indiate the row is a link
-  .link-row {
+  a[role='row'] {
+    display: table-row;
+    transition: background-color 200ms ease-in-out;
+    text-decoration: none;
+    color: $black;
+    
     td {
       padding-top: 0.75rem;
       padding-bottom: 0.75rem;
+      border-bottom: 1px solid $neutral-100;
     }
+    &:last-child td { border-bottom: none; }
 
     &:hover {
       background-color: $bg-50;
+      color: $black;
       cursor: pointer;
 
       // TEXT VARIANT - hyperlink
