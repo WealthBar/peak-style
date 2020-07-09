@@ -1,15 +1,11 @@
 table {
-  width: 100%;
-  display: table;
-  table-layout: auto;
-  border-collapse: separate; // this is necessary to allow border-radius
   background-color: $white;
   border-radius: 0.25rem;
   border: 1px solid $neutral-100;
 
   thead, th {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 0.875rem;
     border-bottom: 1px solid $neutral-300;
   }
 
@@ -69,7 +65,7 @@ table {
 
   // TABLE VARIANT - smaller text
   // this class can be applied to the <table> to shrink all text in the table
-  &.text-small {
+  &.small {
     font-size: 0.875rem;
   }
 
