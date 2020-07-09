@@ -14,12 +14,7 @@
       justify-content: center;
       align-items: center;
       background-color: $bg-50;
-  
-      p {
-        margin: 0;
-        font-size: 1rem;
-        color: $primary-500;
-      }
+      color: $primary-500;
 
       &.dark {
         background-color: $black;
@@ -57,9 +52,5 @@
       white-space: pre-line;
       word-break: break-word;
     }
-  }
-  
-  p {
-    margin: 0;
   }
 }
