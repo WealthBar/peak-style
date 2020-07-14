@@ -43,7 +43,7 @@ table {
     }
     &:last-child td { border-bottom: none; }
 
-    &:hover {
+    &:hover,  &:focus {
       background-color: $bg-50;
       color: $black;
       cursor: pointer;
@@ -65,12 +65,8 @@ table {
 
   // TABLE VARIANT - smaller text
   // this class can be applied to the <table> to shrink all text in the table
-  &.small {
-    font-size: 0.875rem;
-  }
+  &.small { font-size: 0.875rem; }
 
   // TABLE VARIANT - add box-shadow
-  &.shadow {
-    box-shadow: 0 0.25rem 0.5rem rgba($neutral-500, 0.2);
-  }
+  &.shadow { box-shadow: $box-shadow; }
 }
