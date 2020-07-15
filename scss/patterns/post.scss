@@ -1,12 +1,12 @@
 .post {
   margin-bottom: 1rem;
   
-  .status {
+  .post-status {
     display: flex;
     flex-direction: row;
     align-items: center;
 
-    .icon {
+    .status-icon {
       height: 2rem;
       width: 2rem;
       border-radius: 50%;
@@ -18,18 +18,12 @@
 
       &.dark {
         background-color: $black;
-    
-        svg {
-          fill: $white;
-        }
+        svg { fill: $white; }
       }
     
       &.subtle {
         background-color: $secondary-50;
-        
-        svg {
-          fill: $secondary-500;
-        }
+        svg { fill: $secondary-500; }
       }
 
       svg {
@@ -38,12 +32,15 @@
       }
     }
 
-    .content {
-      margin: 0 0 0 0.75rem;
-    }
+    .status-details {
+      font-size: 0.875rem;
+      display: flex;
+      flex-direction: column;
+      margin-left: 0.75rem;
+    } 
   }
 
-  .comment {
+  .post-comment {
     margin: 1rem 0 0 2.75rem;
     border-left: 1px solid $neutral-100;
     padding-left: 1rem;
