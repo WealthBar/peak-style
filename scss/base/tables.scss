@@ -37,30 +37,29 @@ table {
     color: $black;
     
     td {
-      padding-top: 0.75rem;
-      padding-bottom: 0.75rem;
       border-bottom: 1px solid $neutral-100;
     }
     &:last-child td { border-bottom: none; }
+
+    // TEXT VARIANT - hyperlink
+    // applying .link-row-target to a string will give it a link-like appearance
+    .link-row-target {
+      color: $primary-500; // targeting text
+      fill: $primary-500; // targeting SVG
+    }
 
     &:hover,  &:focus {
       background-color: $bg-50;
       color: $black;
       cursor: pointer;
-
-      // TEXT VARIANT - hyperlink
-      // applying .link-row-target to a string will give it a link-like appearance
-      // when the mouse is hovered anywhere over the containing row
-      .link-row-target {
-        color: $primary-500; // targeting text
-        fill: $primary-500; // targeting SVG
-        transition: color 200ms ease-in-out;
-        .subtle {
-          color: $primary-500;
-          transition: color 200ms ease-in-out;
-        }
-      }
     }
+  }
+
+  // ROW VARIANT - larger vertical padding
+  // apply class 'pad' to a row  to provide the larger padding option
+  tr.pad td {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 
   // TABLE VARIANT - smaller text
