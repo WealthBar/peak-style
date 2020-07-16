@@ -1,4 +1,7 @@
 table {
+  width: 100%;
+  border-collapse: separate; // this is necessary to allow border-radius
+  border-spacing: 0;
   background-color: $white;
   border-radius: 0.25rem;
   border: 1px solid $neutral-100;
@@ -48,7 +51,7 @@ table {
       fill: $primary-500; // targeting SVG
     }
 
-    &:hover,  &:focus {
+    &:hover, &:focus {
       background-color: $bg-50;
       color: $black;
       cursor: pointer;
@@ -57,14 +60,11 @@ table {
 
   // ROW VARIANT - larger vertical padding
   // apply class 'pad' to a row  to provide the larger padding option
-  tr.pad td {
+  &.pad tbody td,
+  &.pad tfoot td {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
   }
-
-  // TABLE VARIANT - smaller text
-  // this class can be applied to the <table> to shrink all text in the table
-  &.small { font-size: 0.875rem; }
 
   // TABLE VARIANT - add box-shadow
   &.shadow { box-shadow: $box-shadow; }
