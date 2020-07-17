@@ -80,7 +80,7 @@ p.large {
   margin: 0 0 1.125rem;
 }
 
-small, p.small {
+small, .small {
   font-size: 0.875rem;
 }
 
@@ -100,6 +100,7 @@ del, .neg { color: $ruby-500; }
 .capitalize { text-transform: capitalize; }
 .uppercase { text-transform: uppercase; }
 .center { text-align: center; }
+.right { text-align: right; }
 
 hr {
   box-sizing: content-box;

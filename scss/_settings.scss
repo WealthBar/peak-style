@@ -5,6 +5,8 @@ $mono-stack:  "Fira Mono", Consolas, Monaco, monospace;
 $font-features: "kern", "liga", "ss02", "ss04";
 $tab-numbers: "kern", "liga", "tnum", "ss02", "ss04";
 
+$box-shadow: 0 0.25rem 0.5rem rgba($neutral-500, 0.2);
+
 // -- Media Queries -- //
 $screen-width-small: 'screen and (min-width: 32rem)';
 $screen-max-small: 'screen and (max-width: 47.999rem)'; // use sparingly
