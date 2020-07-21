@@ -1,21 +1,25 @@
 .step {
-  &.step-slide-fade-out-left {
-    animation: 0.5s ease-in-out 0s step-slide-out-left forwards,
-      0.5s ease-in-out 0s step-fade-out forwards;
+  &.slide-out-left {
+    position: absolute;
+    animation: 0.3s ease-in-out slide-out-left;
+    .card { animation: 0.3s ease-in-out fade-out; }
   }
 
-  &.step-slide-fade-out-right {
-    animation: 0.5s ease-in-out 0s step-slide-out-right forwards,
-      0.5s ease-in-out 0s step-fade-out forwards;
+  &.slide-out-right {
+    position: absolute;
+    animation: 0.3s ease-in-out slide-out-right;
+    .card { animation: 0.3s ease-in-out fade-out; }
   }
 
-  &.step-slide-fade-in-left {
-    animation: 0.5s ease-in-out 0s step-slide-in-left forwards,
-      0.5s ease-in-out 0s step-fade-in forwards;
+  &.slide-in-left {
+    position: absolute;
+    animation: 0.3s ease-in-out slide-in-left;
+    .card { animation: 0.3s ease-in-out fade-in; }
   }
 
-  &.step-slide-fade-in-right {
-    animation: 0.5s ease-in-out 0s step-slide-in-right forwards,
-      0.5s ease-in-out 0s step-fade-in forwards;
+  &.slide-in-right {
+    position: absolute;
+    animation: 0.3s ease-in-out slide-in-right;
+    .card { animation: 0.3s ease-in-out fade-in; }
   }
 }
