@@ -18,23 +18,23 @@ table {
     border-bottom: 1px solid $neutral-300;
   }
 
-  tbody, tfoot {
-    transition: background-color 200ms ease-in-out;
-    tr:hover { background-color: $neutral-50; }
-
-    td { 
-      border-bottom: 1px solid $neutral-100;
-      &:last-child td { border-top: none; }
-    }
-  }
-
-  tfoot {
-    font-weight: bold;
-  }
-  
   th, td { padding: 0.5rem; }
   th:first-child, td:first-child { padding-left: 1rem; }
   th:last-child, td:last-child { padding-right: 1rem; }
+
+  tbody tr {
+    transition: background-color 200ms ease-in-out;
+    &:hover { background-color: $neutral-50; }
+    td { border-bottom: 1px solid $neutral-100; }
+    &:last-child td { border-bottom: none; }
+  }
+
+  tfoot tr {
+    transition: background-color 200ms ease-in-out;
+    &:hover { background-color: $neutral-50; }
+    td { border-top: 1px solid $neutral-100; }
+    font-weight: bold;
+  }
   
   svg { transition: fill 200ms ease-in-out; }
 
