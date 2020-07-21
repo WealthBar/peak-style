@@ -1,4 +1,10 @@
 table {
+  // TABLE VARIANT - box-shadow - add calls 'shadow' to the table
+  &.shadow { box-shadow: $box-shadow; }
+
+  // ROW VARIANT - larger vertical padding - add class 'pad' to a row
+  &.pad td { padding: 0.75rem 0.5rem; }
+
   width: 100%;
   border-collapse: separate; // this is necessary to allow border-radius
   border-spacing: 0;
@@ -6,30 +12,29 @@ table {
   border-radius: 0.25rem;
   border: 1px solid $neutral-100;
 
-  thead, th {
+  th {
     font-weight: bold;
     font-size: 0.875rem;
     border-bottom: 1px solid $neutral-300;
   }
 
+  th, td { padding: 0.5rem; }
+  th:first-child, td:first-child { padding-left: 1rem; }
+  th:last-child, td:last-child { padding-right: 1rem; }
+
   tbody tr {
     transition: background-color 200ms ease-in-out;
     &:hover { background-color: $neutral-50; }
-
     td { border-bottom: 1px solid $neutral-100; }
     &:last-child td { border-bottom: none; }
   }
 
-  tfoot {
-    font-weight: bold;
-    td { border-top: 1px solid $neutral-300; }
+  tfoot tr {
     transition: background-color 200ms ease-in-out;
-    tr:hover { background-color: $neutral-50; }
+    &:hover { background-color: $neutral-50; }
+    td { border-top: 1px solid $neutral-100; }
+    font-weight: bold;
   }
-  
-  th, td { padding: 0.5rem; }
-  th:first-child, td:first-child { padding-left: 1rem; }
-  th:last-child, td:last-child { padding-right: 1rem; }
   
   svg { transition: fill 200ms ease-in-out; }
 
@@ -44,28 +49,15 @@ table {
     }
     &:last-child td { border-bottom: none; }
 
-    // TEXT VARIANT - hyperlink
-    // applying .link-row-target to a string will give it a link-like appearance
+    &:hover, &:focus {
+      background-color: $bg-50;
+      color: $black;
+    }
+
+    // TEXT VARIANT - hyperlink styling - add class 'link-row-target' to a cell or string
     .link-row-target {
       color: $primary-500; // targeting text
       fill: $primary-500; // targeting SVG
     }
-
-    &:hover, &:focus {
-      background-color: $bg-50;
-      color: $black;
-      cursor: pointer;
-    }
   }
-
-  // ROW VARIANT - larger vertical padding
-  // apply class 'pad' to a row  to provide the larger padding option
-  &.pad tbody td,
-  &.pad tfoot td {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-
-  // TABLE VARIANT - add box-shadow
-  &.shadow { box-shadow: $box-shadow; }
 }
