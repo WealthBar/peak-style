@@ -1,9 +1,69 @@
-.workflow {
-  position: relative;
+.workflow { width: 100%; }
+
+.step {
   width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  .workflow-form { width: 100%; }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+
+  .card {
+    border: none;
+    border-radius: none;
+    width: 100%;
+    > header,
+    > article,
+    > footer,
+    .card-content {
+      margin: 1.25rem 1.5rem;
+    }
+
+    > footer {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-grow: 1;
+
+      #{$buttons} {  margin-left: .5rem; }
+    }
+  }
+  @media #{$screen-width-medium} {
+    background: none;
+    .card {
+      border: 1px solid $neutral-100;
+      border-radius: 0.25rem;
+      max-width: $small-width;
+      margin: 2rem 0;
+      > header,
+      > article,
+      > footer,
+      .card-content  {
+        margin: 1.5rem  2.5rem;
+      }
+    }
+  }
+
+  &.slide-out-left {
+    position: absolute;
+    animation: 0.3s ease-in-out slide-out-left;
+    .card { animation: 0.3s ease-in-out fade-out; }
+  }
+
+  &.slide-out-right {
+    position: absolute;
+    animation: 0.3s ease-in-out slide-out-right;
+    .card { animation: 0.3s ease-in-out fade-out; }
+  }
+
+  &.slide-in-left {
+    position: absolute;
+    animation: 0.3s ease-in-out slide-in-left;
+    .card { animation: 0.3s ease-in-out fade-in; }
+  }
+
+  &.slide-in-right {
+    position: absolute;
+    animation: 0.3s ease-in-out slide-in-right;
+    .card { animation: 0.3s ease-in-out fade-in; }
+  }
 }
