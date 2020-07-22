@@ -11,14 +11,8 @@
   border-bottom: 1px solid $neutral-100;
   box-shadow: $box-shadow;
 
-  &.flat {
-    box-shadow: none;
-  }
+  &.flat { box-shadow: none; }
 }
-
-// .modal-page-banner {
-//   background-color: $white;
-// }
 
 .banner-content {
   display: flex;
