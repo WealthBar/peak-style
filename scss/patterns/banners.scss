@@ -17,19 +17,20 @@
 .banner-content {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
 
   width: 100%;
   max-width: $xlarge-width;
   margin: 0 1.25rem;
 
-  @media #{screen-width-medium} {
-    margin: 0 3rem;
-  }
+  @media #{screen-width-medium} { margin: 0 3rem; }
 
-  .banner-title,
-  .banner-actions {
-    margin: 0;
+  #{$hx} { margin: 0; }
+
+  .banner-nav {
+    display: flex;
+    flex-direction: row;
+    #{$buttons}, a { margin-left: 0.5rem; }
   }
 }
