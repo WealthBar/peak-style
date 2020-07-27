@@ -48,34 +48,34 @@
     }
 
     &:focus { outline: none; }
-  }
 
-  dialog header {
-    border-bottom: 1px solid $neutral-100;
-    padding: 1rem 1.5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    h4, button {
-      margin: 0;
+    > header {
+      border-bottom: 1px solid $neutral-100;
+      padding: 1rem 1.5rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+  
+      h4, button {
+        margin: 0;
+      }
     }
-  }
 
-  dialog article {
-    padding: 1.5rem 1.5rem 0 1.5rem;
-  }
+    > article {
+      padding: 1.5rem 1.5rem 0 1.5rem;
+    }
 
-  dialog footer {
-    padding: 0 1.5rem 1.5rem 1.5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-
-    button {
-      margin-right: 0.5rem;
+    > footer {
+      padding: 0 1.5rem 1.5rem 1.5rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+  
+      button {
+        margin-right: 0.5rem;
+      }
     }
   }
 }
