@@ -62,6 +62,7 @@ q:before, q:after {
   content: none;
 }
 table {
+  border-collapse: collapse;
   display: table;
   table-layout: auto;
   text-align: left;
