@@ -7,16 +7,11 @@
   align-items: center;
   justify-content: center;
 
+  background-color: $white;
   border-bottom: 1px solid $neutral-100;
   box-shadow: $box-shadow;
 
-  &.flat {
-    box-shadow: none;
-  }
-}
-
-.modal-page-banner {
-  background-color: $white;
+  &.flat { box-shadow: none; }
 }
 
 .banner-content {
