@@ -85,5 +85,10 @@
 .modal-fade-enter, .modal-fade-leave-to { opacity: 0; }
 
 // slide-in-up / slide-out-down transitions applied to the content
-.modal-slide-enter-active, .modal-slide-leave-active { transition: top 300ms 100ms ease-in-out; }
-.modal-slide-enter, .modal-slide-leave-to { top: 100vh; }
+.modal-slide-enter-active, .modal-slide-leave-active {
+  transition: top 300ms 100ms ease-in-out, opacity 300ms 100ms ease-in-out;
+}
+.modal-slide-enter, .modal-slide-leave-to { 
+  top: 50vh;
+  opacity: 0%;
+}

@@ -44,15 +44,20 @@ table.card {
     }
     &:last-child td { border-bottom: none; }
 
-    &:hover, &:focus {
-      background-color: $bg-50;
-      color: $black;
-    }
-
     // TEXT VARIANT - hyperlink styling - add class 'link-row-target' to a cell or string
     .link-row-target {
       color: $primary-500; // targeting text
       fill: $primary-500; // targeting SVG
+    }
+
+    &:hover, &:focus {
+      background-color: $bg-50;
+      color: $black;
+
+      .link-row-target {
+        color: $primary-700; // targeting text
+        fill: $primary-700; // targeting SVG
+      }
     }
   }
 }
