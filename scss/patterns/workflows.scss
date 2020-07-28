@@ -45,8 +45,6 @@
       .card { animation: 0.3s ease-in-out fade-in; }
     }
 
-    #{$buttons} {  margin-left: .5rem; }
-
     @media #{$screen-width-medium} {
       background: none;
 
