@@ -230,7 +230,6 @@ legend {
       display: block;
       padding: 0.75rem 0.75rem 0.75rem 2.75rem;
       margin: 0 0 0.75rem;
-      border-radius: 0.25rem;
       border: 1px solid transparent;
     }
     &:focus + label,
@@ -256,6 +255,7 @@ legend {
   }
   &.border {
     + label {
+      border-radius: 0.25rem;
       border: 1px solid $neutral-100;
       background-color: $white;
       &:hover, &.hover {

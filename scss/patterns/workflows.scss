@@ -12,35 +12,12 @@
       border: none;
       border-radius: none;
       width: 100%;
-      > header,
-      > article,
-      > footer,
-      .card-content {
-        margin: 1.25rem 1.5rem;
-      }
-
       > footer {
         display: flex;
         justify-content: flex-end;
         align-items: center;
         flex-grow: 1;
-
         #{$buttons} {  margin-left: .5rem; }
-      }
-    }
-    @media #{$screen-width-medium} {
-      background: none;
-      .card {
-        border: 1px solid $neutral-100;
-        border-radius: 0.25rem;
-        max-width: $small-width;
-        margin: 2rem 0;
-        > header,
-        > article,
-        > footer,
-        .card-content  {
-          margin: 1.5rem  2.5rem;
-        }
       }
     }
 
@@ -66,6 +43,18 @@
       position: absolute;
       animation: 0.3s ease-in-out slide-in-right;
       .card { animation: 0.3s ease-in-out fade-in; }
+    }
+
+    @media #{$screen-width-medium} {
+      background: none;
+
+      // this is done to ensure that card revert to standard style regradless of cascade ordering
+      .card {
+        border: 1px solid $neutral-100;
+        border-radius: 0.25rem;
+        max-width: $small-width;
+        margin: 2rem 0;
+      }
     }
   }
 }

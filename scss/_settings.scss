@@ -1,9 +1,9 @@
 // Settings are generalized across theme files
 
-$font-stack: "GT-Walsheim", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$mono-stack:  "Fira Mono", Consolas, Monaco, monospace;
-$font-features: "kern", "liga", "ss02", "ss04";
-$tab-numbers: "kern", "liga", "tnum", "ss02", "ss04";
+$font-stack: 'GT-Walsheim', 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$mono-stack:  'Fira Mono', Consolas, Monaco, monospace;
+$font-features: 'kern', 'liga', 'ss02', 'ss04';
+$tab-numbers: 'kern', 'liga', 'tnum', 'ss02', 'ss04';
 
 $box-shadow: 0 0.25rem 0.5rem rgba($neutral-500, 0.2);
 
@@ -49,6 +49,8 @@ $buttons: (
   'button[type="submit"]',
   'input[type="button"]'
 );
+
+$hx: ('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
 
 /* --------   Mixins SPECIFICALLY for base/buttons and patterns/buttons   -------- */
 

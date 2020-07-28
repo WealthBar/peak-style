@@ -17,19 +17,29 @@
 .banner-content {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
-
   width: 100%;
   max-width: $xlarge-width;
   margin: 0 1.25rem;
 
-  @media #{screen-width-medium} {
-    margin: 0 3rem;
+  &.full { max-width: 100%; }
+
+  @media #{screen-width-medium} { margin: 0 3rem; }
+
+  #{$hx} { margin: 0; }
+
+  .banner-masthead {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    #{$buttons}, a { margin-right: 0.5rem; }
   }
 
-  .banner-title,
-  .banner-actions {
-    margin: 0;
+  .banner-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    #{$buttons}, a { margin-left: 0.5rem; }
   }
 }

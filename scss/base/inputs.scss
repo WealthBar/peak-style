@@ -283,8 +283,9 @@ input[type=range] {
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
   width: 100%; /* Specific width is required for Firefox. */
   background: transparent; /* Otherwise white; in Chrome */
+  display: block;
   padding: 0;
-  margin: 0 0 1.25rem;
+  margin: 0 0 1rem; /* visually match margin of other inputs */
   border: none;
 }
 
