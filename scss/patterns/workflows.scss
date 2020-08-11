@@ -17,25 +17,16 @@
         justify-content: flex-end;
         align-items: center;
         flex-grow: 1;
+        flex-wrap: wrap;
       }
+    }
+
+    .error-image {
+      width: 3rem;
     }
 
     .error-info-container {
       width: 100%;
-      text-align: center;
-    }
-
-    .button-loader {
-      flex-grow: 1;
-      margin-bottom: 1rem;
-    }
-
-    .loader-copy-container {
-      width: 100%;
-      padding: 0 0.5rem;
-      position: absolute;
-      top: 2.25rem;
-      left: 0;
       text-align: center;
     }
 
@@ -52,6 +43,20 @@
         height: 1.5rem;
         fill: $neg-500;
       }
+    }
+
+    .button-loader {
+      flex-grow: 1;
+      margin-bottom: 1rem;
+    }
+
+    .loader-copy-container {
+      width: 100%;
+      padding: 0 0.5rem;
+      position: absolute;
+      top: 2.25rem;
+      left: 0;
+      text-align: center;
     }
 
     &.slide-out-left {
