@@ -17,7 +17,40 @@
         justify-content: flex-end;
         align-items: center;
         flex-grow: 1;
-        #{$buttons} {  margin-left: .5rem; }
+      }
+    }
+
+    .error-info-container {
+      width: 100%;
+      text-align: center;
+    }
+
+    .button-loader {
+      flex-grow: 1;
+      margin-bottom: 1rem;
+    }
+
+    .loader-copy-container {
+      width: 100%;
+      padding: 0 0.5rem;
+      position: absolute;
+      top: 2.25rem;
+      left: 0;
+      text-align: center;
+    }
+
+    .commit-error {
+      flex-grow: 1;
+      display: flex;
+    }
+
+    .commit-error-icon-container {
+      margin-right: 0.75rem;
+
+      .error-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: $neg-500;
       }
     }
 
