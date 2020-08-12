@@ -21,30 +21,6 @@
       }
     }
 
-    .error-image {
-      width: 3rem;
-    }
-
-    .error-info-container {
-      width: 100%;
-      text-align: center;
-    }
-
-    .commit-error {
-      flex-grow: 1;
-      display: flex;
-    }
-
-    .commit-error-icon-container {
-      margin-right: 0.75rem;
-
-      .error-icon {
-        width: 1.5rem;
-        height: 1.5rem;
-        fill: $neg-500;
-      }
-    }
-
     .button-loader {
       flex-grow: 1;
       margin-bottom: 1rem;
