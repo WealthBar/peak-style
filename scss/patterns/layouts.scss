@@ -69,8 +69,9 @@
 .icon-content {
   margin: 1.0rem;
 
-  > * { margin-left: 1.5rem }
+  > * { @media #{$screen-width-medium} { margin-left: 1.5rem } }
   .icon-title {
+    margin-left: 1.5rem;
     svg {
       position: absolute;
       top: .125rem;
