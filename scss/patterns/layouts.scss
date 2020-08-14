@@ -83,7 +83,7 @@
 
   // default for title, defined last so that variants don't affect it
   > *:nth-child(2) { margin-left: 1.5rem }
-  svg {
+  > svg {
     position: absolute;
     margin-left: 0rem;
     top: .125rem;
