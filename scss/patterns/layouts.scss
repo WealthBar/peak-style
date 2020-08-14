@@ -67,21 +67,11 @@
 // ICON CONTENT PATTERN
 
 .icon-content {
+  // defaults for body copy
   margin: 1.0rem;
-
   > * { @media #{$screen-width-medium} { margin-left: 1.5rem } }
-  .icon-title {
-    margin-left: 1.5rem;
-    svg {
-      position: absolute;
-      top: .125rem;
-      left: -1.5rem;
-      width: 1rem;
-      height: 1rem;
-    }
-  }
 
-  // VARIANTS
+  // variants
   &.large-margin { @media #{$screen-width-medium} { margin: 1.5rem } }
   &.small * {
     line-height: 1.25rem;
@@ -89,6 +79,16 @@
   }
   &.no-indent { 
     > * { margin-left: 0rem }
-    .icon-title { margin-left: 1.5rem }
+  }
+
+  // default for title, defined last so that variants don't affect it
+  > *:nth-child(2) { margin-left: 1.5rem }
+  svg {
+    position: absolute;
+    margin-left: 0rem;
+    top: .125rem;
+    left: 0rem;
+    width: 1rem;
+    height: 1rem;
   }
 }
