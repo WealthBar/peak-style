@@ -13,6 +13,26 @@
   @media #{$screen-width-medium} { background-color: $neutral-50; }
 }
 
+// CARD
+
+.card {
+  height: auto;
+  background-color: $white;
+  display: inline-block;
+  border-radius: 0.25rem;
+  border: 1px solid $neutral-100;
+
+  &.shadow { box-shadow: $box-shadow; }
+
+  > header,
+  > article,
+  > footer,
+  .card-content {
+    margin: 1.25rem 1.5rem;
+    @media #{$screen-width-medium} { margin: 1.5rem  2.5rem; }
+  }
+}
+
 // Notice UI
 
 .notice {
@@ -42,4 +62,34 @@
   article, header, footer {
     margin: 1rem 1.5rem;
   }
+}
+
+// ICON CONTENT PATTERN
+
+.icon-content {
+  // defaults for body copy
+  margin: 1.0rem;
+  > * { @media #{$screen-width-medium} { margin-left: 1.5rem } }
+
+  // variants
+  &.large-margin { @media #{$screen-width-medium} { margin: 1.5rem } }
+  &.small * {
+    line-height: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  &.no-indent { 
+    > * { margin-left: 0rem }
+    > svg + * { margin-left: 1.5rem }
+  }
+
+  // default for title, defined last so that variants don't affect it
+  > svg {
+    position: absolute;
+    margin-left: 0rem;
+    top: .125rem;
+    left: 0rem;
+    width: 1rem;
+    height: 1rem;
+  }
+  > svg + * { margin-left: 1.5rem }
 }
