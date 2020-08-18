@@ -92,8 +92,14 @@ sup {
 
 strong, b, .strong { font-weight: bold; }
 em, i, var, .em { font-style: normal; }
-del, .neg { color: $ruby-500; }
-.pos { color: $primary-500; }
+del, .neg {
+  color: $neg-500;
+  fill: $neg-500;
+}
+.pos {
+  color: $pos-500;
+  fill: $pos-500;
+}
 
 .tab-numbers { font-feature-settings: $tab-numbers; }
 .subtle { color: rgba($neutral-900, 0.77); }
