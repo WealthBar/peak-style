@@ -96,6 +96,10 @@
 
 ul.card-list {
   margin: 1rem;
+  &.compact {
+    margin: 0.5rem 1rem;
+    li { padding: 0.5rem 0;  }
+  }
   li {
     padding: 1rem 0;
     border-bottom: 1px solid $neutral-100;
