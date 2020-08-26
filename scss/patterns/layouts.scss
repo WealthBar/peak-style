@@ -18,11 +18,23 @@
 .card {
   height: auto;
   background-color: $white;
-  display: inline-block;
   border-radius: 0.25rem;
   border: 1px solid $neutral-100;
 
   &.shadow { box-shadow: $box-shadow; }
+
+  &.modal-view {
+    border: none;
+    border-radius: none;
+    width: 100%;
+    @media #{$screen-max-small} { box-shadow: none; }
+    @media #{$screen-width-medium} {
+      border: 1px solid $neutral-100;
+      border-radius: 0.25rem;
+      max-width: $small-width;
+      margin: 2rem 0;
+    }
+  }
 
   > header,
   > article,
@@ -30,6 +42,13 @@
   .card-content {
     margin: 1.25rem 1.5rem;
     @media #{$screen-width-medium} { margin: 1.5rem  2.5rem; }
+  }
+
+  .footer-next {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
   }
 }
 
