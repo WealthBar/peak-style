@@ -52,6 +52,7 @@ fieldset.fieldset legend {
   display: flex;
   align-items: flex-start;
   font-size: 0.875rem;
+  min-height: 0.0001rem; // hack to avoid collapse in safari
   white-space: pre-wrap;
   transition: all 0.3s ease-out;
   svg {
