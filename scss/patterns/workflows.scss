@@ -7,6 +7,12 @@
     align-items: center;
     justify-content: center;
     background: white;
+    @media #{$screen-width-medium} { background: none; }
+
+    // -- Deprecation Warning
+
+    // card as a stand alone class for workflows will soon to be deprecated
+    // please use card.model-view class as described in layouts.scss
 
     .card {
       border: none;
@@ -19,6 +25,8 @@
         flex-grow: 1;
       }
     }
+
+    // -- End Deprecation Warning
 
     &.slide-out-left {
       position: absolute;
@@ -44,10 +52,13 @@
       .card { animation: 0.3s ease-in-out fade-in; }
     }
 
+    // -- Deprecation Warning
+
+    // card as a stand alone class for workflows will soon to be depricated
+    // please use card.model-view class as described in layouts.scss
+
     @media #{$screen-width-medium} {
       background: none;
-
-      // this is done to ensure that card revert to standard style regradless of cascade ordering
       .card {
         border: 1px solid $neutral-100;
         border-radius: 0.25rem;
@@ -55,5 +66,7 @@
         margin: 2rem 0;
       }
     }
+    // -- End Deprecation Warning
+
   }
 }
