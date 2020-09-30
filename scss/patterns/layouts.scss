@@ -21,7 +21,16 @@
   border-radius: 0.25rem;
   border: 1px solid $neutral-100;
 
+  .card-content,
+  > article, > header, > footer {
+    margin: 1.25rem 1.5rem;
+    @media #{$screen-width-medium} { margin: 1.5rem  2.5rem; }
+  }
+
   &.shadow { box-shadow: $box-shadow; }
+
+  // When a card requires a full width layout on small screen.
+  // Generally for use with fullscreen modal or workflow pages.
 
   &.modal-view {
     border: none;
@@ -34,14 +43,6 @@
       max-width: $small-width;
       margin: 2rem auto;
     }
-  }
-
-  > header,
-  > article,
-  > footer,
-  .card-content {
-    margin: 1.25rem 1.5rem;
-    @media #{$screen-width-medium} { margin: 1.5rem  2.5rem; }
   }
 
   .footer-next {
@@ -78,7 +79,7 @@
     background-color: $secondary-50;
   }
   .notice-content,
-  article, header, footer {
+  > article, > header, > footer {
     margin: 1rem 1.5rem;
   }
 }
