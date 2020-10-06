@@ -25,6 +25,7 @@
   > article, > header, > footer {
     margin: 1.25rem 1.5rem;
     @media #{$screen-width-medium} { margin: 1.5rem  2.5rem; }
+    @media #{$screen-width-small} { margin: 1.5rem  1rem; }
   }
 
   &.shadow { box-shadow: $box-shadow; }
