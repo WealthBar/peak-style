@@ -18,6 +18,10 @@
       border: none;
       border-radius: none;
       width: 100%;
+      > header > h3 {
+        margin-top: 1.5rem;
+      }
+      
       > footer {
         display: flex;
         justify-content: flex-end;
@@ -64,10 +68,6 @@
         border-radius: 0.25rem;
         width: $small-width;
         margin: 1.5rem 0;
-
-        > header > h3 {
-          margin-top: 1.5rem;
-        }
       }
     }
     // -- End Deprecation Warning
