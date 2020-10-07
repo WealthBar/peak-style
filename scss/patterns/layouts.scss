@@ -36,6 +36,8 @@
     border: none;
     border-radius: none;
     width: 100%;
+    margin: 1.5rem 0;
+    
     @media #{$screen-max-small} { box-shadow: none; }
     @media #{$screen-width-medium} {
       border: 1px solid $neutral-100;
