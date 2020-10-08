@@ -23,8 +23,8 @@
 
   .card-content,
   > article, > header, > footer {
-    margin: 1.25rem 1.5rem;
-    @media #{$screen-width-medium} { margin: 1.5rem  1rem; }
+    margin: 1.25rem 1rem;
+    @media #{$screen-width-medium} { margin: 1.5rem  2.5rem; }
   }
 
   &.shadow { box-shadow: $box-shadow; }
@@ -36,14 +36,13 @@
     border: none;
     border-radius: 0;
     width: 100%;
-    margin: 1.5rem auto;
     
     @media #{$screen-max-small} { box-shadow: none; }
     @media #{$screen-width-medium} {
       border: 1px solid $neutral-100;
       border-radius: 0.25rem;
       max-width: $small-width;
-      margin: 2rem auto;
+      margin: 1.5rem auto;
     }
   }
 
