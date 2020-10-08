@@ -36,7 +36,7 @@
     // -- Deprecation Warning
 
     // card as a stand alone class for workflows will soon to be depricated
-    // please use card.model-view class as described in layouts.scss
+    // please use card.modal-view class as described in layouts.scss
     .card:not(.modal-view) {
       border: none;
       border-radius: none;
