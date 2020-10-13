@@ -23,7 +23,7 @@
 
   .card-content,
   > article, > header, > footer {
-    margin: 1.25rem 1.5rem;
+    margin: 1.25rem 1rem;
     @media #{$screen-width-medium} { margin: 1.5rem  2.5rem; }
   }
 
@@ -34,14 +34,15 @@
 
   &.modal-view {
     border: none;
-    border-radius: none;
+    border-radius: 0;
     width: 100%;
+    
     @media #{$screen-max-small} { box-shadow: none; }
     @media #{$screen-width-medium} {
       border: 1px solid $neutral-100;
       border-radius: 0.25rem;
-      max-width: $small-width;
-      margin: 2rem auto;
+      max-width: 36rem; 
+      margin: 1.5rem auto;
     }
   }
 
