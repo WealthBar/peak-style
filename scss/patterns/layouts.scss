@@ -92,15 +92,22 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  margin: 0 0 1rem;
-  > svg {
+  margin-bottom: 1rem;
+  > svg, > img {
     flex: 0 0 1rem;
     top: 0.125rem;
     margin-right: 0.5rem;
   }
+  &.small {
+    line-height: 1.25rem;
+    margin-bottom: .5rem;
+  }
   p:last-child { margin-bottom: 0; }
+  & ~.icon-content-block {
+    @media #{$screen-width-medium} { margin-left: 1.5rem; }
+  }
 }
-.icon-content-block { @media #{$screen-width-medium} { margin-left: 1.5rem; } }
+
 
 ul.card-list {
   margin: 1rem;
