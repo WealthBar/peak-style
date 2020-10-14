@@ -85,8 +85,10 @@
   }
 }
 
-// ICON CONTENT PATTERN
+// Icon Block Pattern
+// prefer the use of `icon-block` class — it is more descriptive of the structural context for the pattern
 
+.icon-block,
 .icon-content {
   display: flex;
   flex-direction: row;
@@ -103,9 +105,7 @@
     margin-bottom: .5rem;
   }
   p:last-child { margin-bottom: 0; }
-  & ~.icon-content-block {
-    @media #{$screen-width-medium} { margin-left: 1.5rem; }
-  }
+  & ~.icon-block-content { @media #{$screen-width-medium} { margin-left: 1.5rem; } }
 }
 
 
