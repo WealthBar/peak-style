@@ -1,4 +1,5 @@
-.tabs {
+[role="tablist"],
+.tablist {
   display: flex;
   margin-bottom: 1.5rem;
   border-bottom: 1px solid $neutral-100;
@@ -14,7 +15,8 @@
     margin-right: 1rem;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
 
-    &.active {
+    &.active,
+    &[aria-selected="true"] {
       background: none;
       color: $neutral-900;
       border-bottom: 1px solid $primary-300;
