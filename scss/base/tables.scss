@@ -50,7 +50,19 @@ table.card {
       fill: $primary-500; // targeting SVG
     }
 
-    %row-focus {
+    @media (hover: hover) {
+      &:hover {
+        background-color: $bg-50;
+        color: $black;
+
+        .link-row-target {
+          color: $primary-700; // targeting text
+          fill: $primary-700; // targeting SVG
+        }
+      }
+    }
+
+    &:focus {
       background-color: $bg-50;
       color: $black;
 
@@ -59,9 +71,5 @@ table.card {
         fill: $primary-700; // targeting SVG
       }
     }
-    @media (hover: hover) {
-      &:hover { @extend %row-focus; }
-    }
-    &:focus { @extend %row-focus; }
   }
 }

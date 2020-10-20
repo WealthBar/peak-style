@@ -60,16 +60,20 @@ $hx: ('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
   fill: $text;
   background: $default;
 
-  %fill-focus {
+  @media (hover: hover) {
+    &:hover, &.hover {
+      border-color: transparent;
+      color: $text;
+      fill: $text;
+      background: $default;
+    }
+  }
+
+  &:focus, &.focus {
     border-color: transparent;
     color: $text;
     fill: $text;
-    background: $hover;
-  }
-  @media (hover: hover) { &:hover, &.hover { @extend %fill-focus; } }
-  &:focus, &.focus { @extend %fill-focus; }
-
-  &:focus, &.focus {
+    background: $default;
     outline: none;
     box-shadow: 0 0 0 1px $text, 0 0 0 3px $hover;
   }
