@@ -102,14 +102,20 @@ $hx: ('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
   fill: $default;
   background: transparent;
 
-  &:hover, &.hover, &:focus, &.focus {
+  @media (hover: hover) {
+    &:hover, &.hover {
+      border-color: $hover;
+      color: $text;
+      fill: $text;
+      background: $hover;
+    }
+  }
+
+  &:focus, &.focus {
     border-color: $hover;
     color: $text;
     fill: $text;
     background: $hover;
-  }
-
-  &:focus, &.focus {
     outline: none;
     box-shadow: 0 0 0 1px $text, 0 0 0 3px $hover;
   }
@@ -141,13 +147,18 @@ $hx: ('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
   padding: 0.375rem 0;
   font-weight: normal;
 
-  &:hover, &.hover, &:focus, &.focus {
-    border-color: transparent;
-    color: $hover;
-    fill: $hover;
+  @media (hover: hover) {
+    &:hover, &.hover {
+      border-color: transparent;
+      color: $hover;
+      fill: $hover;
+    }
   }
 
   &:focus, &.focus {
+    border-color: transparent;
+    color: $hover;
+    fill: $hover;
     box-shadow: none;
     stroke: $hover;
     background: rgba($default, 0.1);
