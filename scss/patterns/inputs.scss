@@ -259,9 +259,11 @@ legend {
       border-radius: 0.25rem;
       border: 1px solid $neutral-100;
       background-color: $white;
-      &:hover, &.hover {
-        background-color: $bg-50;
-        border-color: $bg-50;
+      @media (hover: hover) {
+        &:hover, &.hover {
+          background-color: $bg-50;
+          border-color: $bg-50;
+        }
       }
     }
 

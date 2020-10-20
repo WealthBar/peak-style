@@ -22,7 +22,7 @@
       border-bottom: 1px solid $primary-300;
     }
 
-    &:hover { color: $primary-500; }
+    @media (hover: hover) { &:hover { color: $primary-500; } }
 
     &:focus { background-color: $bg-50; }
 

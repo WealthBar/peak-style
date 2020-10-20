@@ -15,7 +15,14 @@
     background: rgba($default, 0.1);
   }
 
-  &:hover, &.hover, &:focus, &.focus {
+  @media (hover: hover) {
+    &:hover, &.hover {
+      color: $hover;
+      fill: $hover;
+      svg { border-color: $hover; }
+    }
+  }
+  &:focus, &.focus {
     color: $hover;
     fill: $hover;
     svg { border-color: $hover; }

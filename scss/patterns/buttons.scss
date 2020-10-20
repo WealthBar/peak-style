@@ -148,12 +148,14 @@
     fill: $neutral-900;
     background: $neutral-0;
 
-    &:hover, &.hover, &:focus, &.focus {
+    %subtle-button-focus {
       border-color: $neutral-300;
       color: $neutral-900;
       fill: $neutral-900;
       background: $neutral-300;
     }
+    @media (hover: hover) { &:hover, &.hover { @extend %subtle-button-focus; } }
+    &:focus, &.focus { @extend %subtle-button-focus; }
 
     &:active, &.active {
       border-color: $neutral-100;

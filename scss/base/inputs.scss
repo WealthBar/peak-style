@@ -173,11 +173,16 @@ input[type='checkbox'] {
     width: 1.25rem;
   }
 
-  &:hover + label:before,
-  &.hover + label:before,
   &:focus + label:before,
   &.focus + label:before {
     border-color: $primary-500;
+  }
+
+  @media (hover: hover) {
+    &:hover + label:before,
+    &.hover + label:before {
+      border-color: $primary-500;
+    }
   }
 
   &:active + label:before,
@@ -195,10 +200,12 @@ input[type='checkbox'].checked {
     background-color: $primary-500;
   }
 
-  &:hover + label:before,
-  &.hover + label:before {
-    border-color: $primary-700;
-    background-color: $primary-700;
+  @media (hover: hover) {
+    &:hover + label:before,
+    &.hover + label:before {
+      border-color: $primary-700;
+      background-color: $primary-700;
+    }
   }
 
   &:focus + label:before,
@@ -227,8 +234,14 @@ input[type="radio"] {
     border: 1px solid $neutral-300;
     margin: 0 0.75rem 0 0;
   }
-  &:hover + label:before,
-  &.hover + label:before,
+
+  @media (hover: hover) {
+    &:hover + label:before,
+    &.hover + label:before {
+      border: 1px solid $primary-500;
+    }
+  }
+
   &:focus + label:before,
   &.focus + label:before,
   &:checked + label:before,
@@ -263,13 +276,17 @@ input[type="radio"] {
     height: 0.75rem;
     background: $primary-500;
   }
-  &:checked:hover,
-  &:checked.hover,
-  &.checked:hover,
-  &.checked.hover {
-    + label:before { border-color: $primary-700; }
-    + label:after { background-color: $primary-700; }
+
+  @media (hover: hover) {
+    &:checked:hover,
+    &:checked.hover,
+    &.checked:hover,
+    &.checked.hover {
+      + label:before { border-color: $primary-700; }
+      + label:after { background-color: $primary-700; }
+    }
   }
+
   &:checked:active,
   &:checked.active {
     + label:before { border-color: $primary-900; }

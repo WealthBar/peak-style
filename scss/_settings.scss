@@ -60,12 +60,14 @@ $hx: ('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
   fill: $text;
   background: $default;
 
-  &:hover, &.hover, &:focus, &.focus {
+  %fill-focus {
     border-color: transparent;
     color: $text;
     fill: $text;
     background: $hover;
   }
+  @media (hover: hover) { &:hover, &.hover { @extend %fill-focus; } }
+  &:focus, &.focus { @extend %fill-focus; }
 
   &:focus, &.focus {
     outline: none;
