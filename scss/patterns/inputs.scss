@@ -256,14 +256,16 @@ legend {
   }
   &.border {
     + label {
-      border-radius: 0.25rem;
-      border: 1px solid $neutral-100;
       background-color: $white;
-      @media (hover: hover) {
-        &:hover, &.hover {
-          background-color: $bg-50;
-          border-color: $bg-50;
-        }
+      border: 1px solid $neutral-100;
+      border-radius: 0.25rem;
+      &:hover, &.hover {
+        background-color: $bg-50;
+        border-color: $bg-50;
+      }
+      @include safari-hover-fix {
+        background-color: $white;
+        border-color: $neutral-100;
       }
     }
 

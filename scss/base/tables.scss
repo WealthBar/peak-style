@@ -19,16 +19,16 @@ table.card {
 
   tbody tr {
     transition: background-color 200ms ease-in-out;
-    @media (hover: hover) { &:hover { background-color: $neutral-50; } }
     td { border-bottom: 1px solid $neutral-100; }
     &:last-child td { border-bottom: none; }
+    &:hover { background-color: $neutral-50; }
   }
 
   tfoot tr {
     transition: background-color 200ms ease-in-out;
-    @media (hover: hover) { &:hover { background-color: $neutral-50; } }
-    td { border-top: 1px solid $neutral-100; }
     font-weight: bold;
+    td { border-top: 1px solid $neutral-100; }
+    &:hover { background-color: $neutral-50; }
   }
 
   svg { transition: fill 200ms ease-in-out; }
@@ -50,19 +50,7 @@ table.card {
       fill: $primary-500; // targeting SVG
     }
 
-    @media (hover: hover) {
-      &:hover {
-        background-color: $bg-50;
-        color: $black;
-
-        .link-row-target {
-          color: $primary-700; // targeting text
-          fill: $primary-700; // targeting SVG
-        }
-      }
-    }
-
-    &:focus {
+    &:hover, &:focus {
       background-color: $bg-50;
       color: $black;
 

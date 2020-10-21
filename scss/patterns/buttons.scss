@@ -148,16 +148,7 @@
     fill: $neutral-900;
     background: $neutral-0;
 
-    @media (hover: hover) {
-      &:hover, &.hover {
-        border-color: $neutral-300;
-        color: $neutral-900;
-        fill: $neutral-900;
-        background: $neutral-300;
-      }
-    }
-
-    &:focus, &.focus {
+    &:hover, &.hover, &:focus, &.focus {
       border-color: $neutral-300;
       color: $neutral-900;
       fill: $neutral-900;
