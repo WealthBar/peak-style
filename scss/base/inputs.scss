@@ -173,12 +173,20 @@ input[type='checkbox'] {
     width: 1.25rem;
   }
 
-  &:hover + label:before,
-  &.hover + label:before,
   &:focus + label:before,
   &.focus + label:before {
     border-color: $primary-500;
   }
+
+
+  &:hover + label:before,
+  &.hover + label:before {
+    border-color: $primary-500;
+  }
+  @include safari-hover-fix() {
+    + label:before { border-color: $neutral-300; }
+  }
+
 
   &:active + label:before,
   &.active + label:before {
@@ -199,6 +207,12 @@ input[type='checkbox'].checked {
   &.hover + label:before {
     border-color: $primary-700;
     background-color: $primary-700;
+  }
+  @include safari-hover-fix() {
+    + label:before {
+      border-color: $primary-500;
+      background-color: $primary-500;
+    }
   }
 
   &:focus + label:before,
@@ -227,8 +241,15 @@ input[type="radio"] {
     border: 1px solid $neutral-300;
     margin: 0 0.75rem 0 0;
   }
+
   &:hover + label:before,
-  &.hover + label:before,
+  &.hover + label:before {
+    border: 1px solid $primary-500;
+  }
+  @include safari-hover-fix() {
+    + label:before { border-color: $neutral-300; }
+  }
+
   &:focus + label:before,
   &.focus + label:before,
   &:checked + label:before,
@@ -263,6 +284,7 @@ input[type="radio"] {
     height: 0.75rem;
     background: $primary-500;
   }
+
   &:checked:hover,
   &:checked.hover,
   &.checked:hover,
@@ -270,6 +292,7 @@ input[type="radio"] {
     + label:before { border-color: $primary-700; }
     + label:after { background-color: $primary-700; }
   }
+
   &:checked:active,
   &:checked.active {
     + label:before { border-color: $primary-900; }

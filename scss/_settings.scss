@@ -52,7 +52,21 @@ $buttons: (
 
 $hx: ('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
 
-/* --------   Mixins SPECIFICALLY for base/buttons and patterns/buttons   -------- */
+/*
+Mixin to fix iOS safari sticky hover (use only as required)
+
+@include safari-hover-fix() {
+  property: default non-hover value;
+}
+*/
+
+@mixin safari-hover-fix {
+  @media (hover: none) {
+    &:hover, &.hover { @content; }
+  }
+}
+
+/* --  Mixins SPECIFICALLY for base/buttons and patterns/buttons  -- */
 
 @mixin fill($default, $active, $hover, $text: white ) {
   border-color: transparent;
@@ -60,7 +74,7 @@ $hx: ('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
   fill: $text;
   background: $default;
 
-  &:hover, &.hover, &:focus, &.focus {
+  &:hover, &.hover {
     border-color: transparent;
     color: $text;
     fill: $text;
@@ -68,6 +82,10 @@ $hx: ('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
   }
 
   &:focus, &.focus {
+    border-color: transparent;
+    color: $text;
+    fill: $text;
+    background: $hover;
     outline: none;
     box-shadow: 0 0 0 1px $text, 0 0 0 3px $hover;
   }
@@ -96,7 +114,7 @@ $hx: ('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
   fill: $default;
   background: transparent;
 
-  &:hover, &.hover, &:focus, &.focus {
+  &:hover, &.hover {
     border-color: $hover;
     color: $text;
     fill: $text;
@@ -104,6 +122,10 @@ $hx: ('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
   }
 
   &:focus, &.focus {
+    border-color: $hover;
+    color: $text;
+    fill: $text;
+    background: $hover;
     outline: none;
     box-shadow: 0 0 0 1px $text, 0 0 0 3px $hover;
   }
@@ -135,15 +157,17 @@ $hx: ('h1', 'h2', 'h3', 'h4', 'h5', 'h6');
   padding: 0.375rem 0;
   font-weight: normal;
 
-  &:hover, &.hover, &:focus, &.focus {
+  &:hover, &.hover {
     border-color: transparent;
     color: $hover;
     fill: $hover;
   }
 
   &:focus, &.focus {
+    border-color: transparent;
+    color: $hover;
+    fill: $hover;
     box-shadow: none;
-    stroke: $hover;
     background: rgba($default, 0.1);
   }
 

@@ -19,18 +19,18 @@ table.card {
 
   tbody tr {
     transition: background-color 200ms ease-in-out;
-    &:hover { background-color: $neutral-50; }
     td { border-bottom: 1px solid $neutral-100; }
     &:last-child td { border-bottom: none; }
+    &:hover { background-color: $neutral-50; }
   }
 
   tfoot tr {
     transition: background-color 200ms ease-in-out;
-    &:hover { background-color: $neutral-50; }
-    td { border-top: 1px solid $neutral-100; }
     font-weight: bold;
+    td { border-top: 1px solid $neutral-100; }
+    &:hover { background-color: $neutral-50; }
   }
-  
+
   svg { transition: fill 200ms ease-in-out; }
 
   a[role='row'] {
@@ -38,7 +38,7 @@ table.card {
     transition: background-color 200ms ease-in-out;
     text-decoration: none;
     color: $black;
-    
+
     td {
       border-bottom: 1px solid $neutral-100;
     }

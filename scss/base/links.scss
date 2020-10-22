@@ -11,11 +11,14 @@
 
   &:focus,
   &.focus {
+    color: $hover;
+    fill: $hover;
+    svg { border-color: $hover; }
     outline: none;
     background: rgba($default, 0.1);
   }
 
-  &:hover, &.hover, &:focus, &.focus {
+  &:hover, &.hover {
     color: $hover;
     fill: $hover;
     svg { border-color: $hover; }
