@@ -95,6 +95,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   margin-bottom: 1rem;
+  > * { width: 100% }
   > svg, > img {
     flex: 0 0 1rem;
     top: 0.125rem;
@@ -102,7 +103,6 @@
   }
   &.small {
     line-height: 1.25rem;
-    margin-bottom: .5rem;
   }
   p:last-child { margin-bottom: 0; }
   & ~.icon-block-content { @media #{$screen-width-medium} { margin-left: 1.5rem; } }
