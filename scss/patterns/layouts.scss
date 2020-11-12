@@ -27,6 +27,13 @@
     @media #{$screen-width-medium} { margin: 1.5rem  2.5rem; }
   }
 
+  // tabs in cards require matching padding
+  [role="tablist"],
+  .tablist {
+    padding: 0 1rem;
+    @media #{$screen-width-medium} { padding: 0  2.5rem; }
+  }
+
   &.shadow { box-shadow: $box-shadow; }
 
   // When a card requires a full width layout on small screen.
@@ -36,12 +43,12 @@
     border: none;
     border-radius: 0;
     width: 100%;
-    
+
     @media #{$screen-max-small} { box-shadow: none; }
     @media #{$screen-width-medium} {
       border: 1px solid $neutral-100;
       border-radius: 0.25rem;
-      max-width: 36rem; 
+      max-width: 36rem;
       margin: 1.5rem auto;
     }
   }
@@ -82,6 +89,20 @@
   .notice-content,
   > article, > header, > footer {
     margin: 1rem 1.5rem;
+  }
+
+  // for use with toast notifications (account for close [x] button)
+  .toast-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 1rem 1.5rem;
+    > * { margin-bottom: 0; }
+    button {
+      flex: 0 1;
+      margin-left: 1.5rem;
+    }
   }
 }
 
