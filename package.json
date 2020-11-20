@@ -20,7 +20,7 @@
   },
   "author": "Andrew Pengelly",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "sass": "^1.29.0"
   }
 }
