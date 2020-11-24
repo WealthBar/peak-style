@@ -1,26 +1,26 @@
 {
   "name": "@wealthbar/peak-style",
-  "version": "2.5.4",
+  "version": "3.0.0",
   "description": "Base and Pattern styles for Peak Design System",
   "main": "scss/index.scss",
   "scripts": {
-    "wealthbar-base": "node-sass --output-style compressed -o css/ src/wealthbar-base.scss",
-    "assante-base": "node-sass --output-style compressed -o css/ src/assante-base.scss",
-    "ppi-base": "node-sass --output-style compressed -o css/ src/ppi-base.scss",
+    "wealthbar-base": "sass --style compressed src/wealthbar-base.scss:css/wealthbar-base.css",
+    "assante-base": "sass --style compressed src/assante-base.scss:css/assante-base.css",
+    "ppi-base": "sass --style compressed src/ppi-base.scss:css/ppi-base.css",
     "base": "yarn run wealthbar-base && yarn run assante-base && yarn run ppi-base",
-    "wealthbar-patterns": "node-sass --output-style compressed -o css/ src/wealthbar-patterns.scss",
-    "assante-patterns": "node-sass --output-style compressed -o css/ src/assante-patterns.scss",
-    "ppi-patterns": "node-sass --output-style compressed -o css/ src/ppi-patterns.scss",
+    "wealthbar-patterns": "sass --style compressed src/wealthbar-patterns.scss:css/wealthbar-patterns.css",
+    "assante-patterns": "sass --style compressed src/assante-patterns.scss:css/assante-patterns.css",
+    "ppi-patterns": "sass --style compressed src/ppi-patterns.scss:css/ppi-patterns.css",
     "patterns": "yarn run wealthbar-patterns && yarn run assante-patterns && yarn run ppi-patterns",
     "css": "yarn run base && yarn run patterns"
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.wealth.bar:andrew.pengelly/peak-style.git"
+    "url": "git@github.com:WealthBar/peak-style.git"
   },
   "author": "Andrew Pengelly",
   "license": "ISC",
-  "dependencies": {
-    "node-sass": "^4.12.0"
+  "devDependencies": {
+    "sass": "^1.29.0"
   }
 }
