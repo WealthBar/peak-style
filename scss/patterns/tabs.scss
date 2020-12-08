@@ -16,6 +16,7 @@
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
 
     &.active,
+    &.router-link-active,
     &[aria-selected="true"] {
       background: none;
       color: $neutral-900;
