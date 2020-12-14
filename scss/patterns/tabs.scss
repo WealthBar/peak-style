@@ -4,6 +4,10 @@
   margin-bottom: 1.5rem;
   border-bottom: 1px solid $neutral-100;
   font-weight: bold;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  @media #{$screen-width-medium} { overflow: visible; }
 
   .tab {
     color: $neutral-700;
@@ -14,13 +18,15 @@
     bottom: -1px; // bring each tab in line with the tabs border
     margin-right: 1rem;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
+    white-space: nowrap;
 
     &.active,
     &.router-link-active,
     &[aria-selected="true"] {
-      background: none;
-      color: $neutral-900;
+      color: $primary-500;
       border-bottom: 1px solid $primary-300;
+      background: none;
+      @media #{$screen-width-medium} { color: $neutral-900;}
     }
 
     &:hover { color: $primary-500; }

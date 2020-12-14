@@ -44,6 +44,12 @@ fieldset.fieldset legend {
   margin: 0 0 0.25rem -0.25rem;
 }
 
+.input-xsmall { width: 4rem; }
+.input-small { width: 6rem; }
+.input-med { width: 8rem; }
+.input-large { width: 10rem; }
+.input-xlarge { width: 12rem; }
+
 // ------------------------- Error, Warning, and Help messaging ------------------------- //
 
 .error-message,
@@ -146,7 +152,8 @@ legend {
   justify-content: flex-start;
   margin: 0;
   > *,
-  > input {
+  > input,
+  > select {
     flex: 0 1 auto;
     margin-right: 0.75rem;
     &:last-child { margin-right: 0; }
@@ -155,11 +162,13 @@ legend {
   &.full {
     display: block;
     > *,
-    > input { margin-right: 0; }
+    > input,
+    > select { margin-right: 0; }
     @media #{$screen-width-medium} {
       display: flex;
       > *,
-      > input {
+      > input,
+      > select {
         flex: 1 1 100%;
         margin-right: 0.75rem;
         &:last-child { margin-right: 0; }

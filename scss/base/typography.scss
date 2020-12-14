@@ -109,6 +109,7 @@ del, .neg {
 .center { text-align: center; }
 .right { text-align: right; }
 .monospace { font-family: $mono-stack; }
+.emoji { vertical-align: middle; }
 
 hr {
   box-sizing: content-box;
