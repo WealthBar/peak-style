@@ -105,7 +105,7 @@ del, .neg {
 .subtle { color: rgba($neutral-900, 0.77); }
 .sentence-case:first-letter{ text-transform: capitalize; }
 .title-case, .capitalize { text-transform: capitalize; }
-.uppercase { text-transform: uppercase; }
+.uppercase, .upper-case { text-transform: uppercase; }
 .center { text-align: center; }
 .right { text-align: right; }
 .monospace { font-family: $mono-stack; }
