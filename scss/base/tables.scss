@@ -73,7 +73,7 @@ table.data-table {
   overflow-x: auto;
   th, td {
     background-clip: padding-box;
-    border: 1px solid $neutral-700;
+    border: 1px solid $neutral-500;
     padding: 0.25rem;
     vertical-align: middle;
     &.action-col {
@@ -100,11 +100,11 @@ table.data-table {
 dl.data-list {
   margin-bottom: 1rem;
   > div {
-    border: 1px solid $neutral-700;
+    border: 1px solid $neutral-500;
     border-bottom: none;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    &:last-child { border-bottom: 1px solid $neutral-700; }
+    &:last-child { border-bottom: 1px solid $neutral-500; }
   }
   dt, dd {
     padding: 0.25rem;
@@ -112,7 +112,7 @@ dl.data-list {
     align-items: center;
   }
   dt {
-    border-right: 1px solid $neutral-700;
+    border-right: 1px solid $neutral-500;
     background-color: $neutral-100;
     font-weight: bold;
   }
