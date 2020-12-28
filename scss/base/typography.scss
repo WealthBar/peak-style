@@ -152,6 +152,20 @@ code {
   font-family: $mono-stack;
   font-size: 0.875rem;
 }
+
+/* Inline code */
+:not(pre) > code {
+	padding: 0.125em;
+	border-radius: 0.25em;
+	white-space: normal;
+	background: $neutral-100;
+  color: $neutral-900;
+  &.prime {
+    background: $primary-100;
+    color: $primary-900;
+  }
+}
+
 .no-margin { margin: 0; }
 
 /* -------- SMALL SCREEN MEDIA QUERIES ------- */
