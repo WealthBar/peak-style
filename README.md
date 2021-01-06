@@ -5,6 +5,16 @@ This package is used to install the SCSS or CSS style for the *Peak Design Syste
 * **Base styles** - Basic HTML document setup, typography and elemental styling. No layout or structure patterns.
 * **Pattern library** - a resource of commonly used patterns for component structures and page layout.
 
+## Crafting a Release
+
+1. Update `package.json` with new version.
+2. Complete Standard PR -> Approve process.
+2. Compile CSS with `yarn run css` locally – then merge PR to `master`.
+4. Go to [Release Page](https://github.com/WealthBar/peak-style/releases) and click `Draft a new release` Button.
+5. Tag with updated matching version in `package.json` and write description.
+6. Click `Publish release`.
+7. Nothing, there is no 7th step.
+
 ## Usage
 
 ### Option 1 - SCSS
