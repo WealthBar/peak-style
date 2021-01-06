@@ -61,3 +61,71 @@ table.card {
     }
   }
 }
+
+// Billing UI data-table
+// .data-table-container {
+//   max-width: 100%;
+//   overflow-x: auto;
+// }
+table.data-table {
+  display: block;
+  // border-collapse: collapse;
+  // border-spacing: 0;
+  // width: 100%;
+  margin-bottom: 1rem;
+  max-width: 100%;
+  overflow-x: auto;
+
+  th, td {
+    background-clip: padding-box;
+    border: 1px solid $neutral-500;
+    padding: 0.25rem;
+    vertical-align: middle;
+    &.action-col {
+      background: none;
+      border: none;
+      padding: 0 0 0 0.25rem;
+    }
+  }
+  th {
+    background-color: $neutral-100;
+    font-weight: bold;
+  }
+  td {
+    border-top: none;
+    background-color: $neutral-0;
+    &.null { background-color: $neutral-50; }
+  }
+  tfoot button { margin-top: 1rem; }
+}
+
+
+// Definiton List — data-list styling
+
+dl.data-list {
+  margin-bottom: 1rem;
+  > div {
+    border: 1px solid $neutral-500;
+    border-bottom: none;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    &:last-child { border-bottom: 1px solid $neutral-500; }
+  }
+  dt, dd {
+    padding: 0.25rem;
+    // display: flex;
+    // align-items: center;
+  }
+  dt {
+    border-right: 1px solid $neutral-500;
+    background-color: $neutral-100;
+    font-weight: bold;
+  }
+  dd { background-color: $neutral-0; }
+  &.input-list {
+    label, input, textarea, select, button {
+      margin: 0 0.75rem 0 0;
+      &:last-child { margin: 0; }
+    }
+  }
+}

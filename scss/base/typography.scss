@@ -109,6 +109,7 @@ del, .neg {
 .center { text-align: center; }
 .right { text-align: right; }
 .monospace { font-family: $mono-stack; }
+.emoji { vertical-align: middle; }
 
 hr {
   box-sizing: content-box;
@@ -151,6 +152,20 @@ code {
   font-family: $mono-stack;
   font-size: 0.875rem;
 }
+
+/* Inline code */
+:not(pre) > code {
+	padding: 0.125em;
+	border-radius: 0.25em;
+	white-space: normal;
+	background: $neutral-100;
+  color: $neutral-900;
+  &.alt {
+    background: $primary-100;
+    color: $primary-900;
+  }
+}
+
 .no-margin { margin: 0; }
 
 /* -------- SMALL SCREEN MEDIA QUERIES ------- */
