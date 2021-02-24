@@ -2,6 +2,8 @@
   "name": "@wealthbar/peak-style",
   "version": "3.1.1",
   "description": "Base and Pattern styles for Peak Design System",
+  "contributors": ["Andrew Pengelly", "Sharifa Samuels", "Travis Rempel"],
+  "license": "MIT",
   "main": "scss/index.scss",
   "scripts": {
     "wealthbar-base": "sass --style compressed src/wealthbar-base.scss:css/wealthbar-base.css",
@@ -18,8 +20,6 @@
     "type": "git",
     "url": "git@github.com:WealthBar/peak-style.git"
   },
-  "author": "Andrew Pengelly",
-  "license": "ISC",
   "devDependencies": {
     "sass": "^1.29.0"
   }
