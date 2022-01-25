@@ -199,14 +199,14 @@ input[type='checkbox'] {
 input[type='checkbox']:checked,
 input[type='checkbox'].checked {
   & + label:before {
-    border-color: $primary-500;
-    background-color: $primary-500;
+    border-color: $primary-300;
+    background-color: $primary-300;
   }
 
   &:hover + label:before,
   &.hover + label:before {
-    border-color: $primary-700;
-    background-color: $primary-700;
+    border-color: $primary-500;
+    background-color: $primary-500;
   }
   @include safari-hover-fix() {
     + label:before {
@@ -217,13 +217,13 @@ input[type='checkbox'].checked {
 
   &:focus + label:before,
   &.focus + label:before {
-    border-color: $primary-700;
+    border-color: $primary-500;
   }
 
   &:active + label:before,
   &.active + label:before {
-    border-color: $primary-900;
-    background-color: $primary-900;
+    border-color: $primary-700;
+    background-color: $primary-700;
   }
 }
 
@@ -244,7 +244,7 @@ input[type="radio"] {
 
   &:hover + label:before,
   &.hover + label:before {
-    border: 1px solid $primary-500;
+    border: 1px solid $primary-300;
   }
   @include safari-hover-fix() {
     + label:before { border-color: $neutral-300; }
@@ -254,11 +254,11 @@ input[type="radio"] {
   &.focus + label:before,
   &:checked + label:before,
   &.checked + label:before { // outer circle when hovered, focused, or checked
-    border: 1px solid $primary-500;
+    border: 1px solid $primary-300;
   }
   &:active + label:before,
   &.active + label:before {
-    border: 1px solid $primary-700;
+    border: 1px solid $primary-500;
   }
 
   + label:after { // inner circle w/ no interaction
@@ -282,21 +282,21 @@ input[type="radio"] {
     left: 0.25rem;
     width: 0.75rem;
     height: 0.75rem;
-    background: $primary-500;
+    background: $primary-300;
   }
 
   &:checked:hover,
   &:checked.hover,
   &.checked:hover,
   &.checked.hover {
-    + label:before { border-color: $primary-700; }
-    + label:after { background-color: $primary-700; }
+    + label:before { border-color: $primary-500; }
+    + label:after { background-color: $primary-500; }
   }
 
   &:checked:active,
   &:checked.active {
-    + label:before { border-color: $primary-900; }
-    + label:after { background-color: $primary-900; }
+    + label:before { border-color: $primary-700; }
+    + label:after { background-color: $primary-700; }
   }
 }
 

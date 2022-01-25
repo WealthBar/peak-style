@@ -173,4 +173,37 @@
     }
     &:focus, &.focus { box-shadow: 0 0 0 1px $white, 0 0 0 3px $neutral-300; }
   }
+
+  &.subtle-new {
+    border: none;
+    border-bottom: 1px solid $neutral-100;
+    color: $neutral-900;
+    fill: $neutral-900;
+    background: $bg;
+
+    &:hover, &.hover, &:focus, &.focus {
+      color: $neutral-900;
+      fill: $neutral-900;
+      background: $neutral-100;
+      border-bottom-color: $neutral-300;
+      box-shadow: none;
+    }
+
+    &:active, &.active {
+      border-bottom-color: $neutral-400;
+      color: $neutral-900;
+      fill: $neutral-900;
+      background: $neutral-300;
+    }
+
+    &:disabled, &.disabled {
+      border: 2px solid $neutral-100;
+      color: $neutral-400;
+      font-weight: normal;
+      fill: $neutral-400;
+      background: $white;
+      cursor: default;
+      outline: none;
+    }
+  }
 }
