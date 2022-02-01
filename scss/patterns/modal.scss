@@ -41,9 +41,7 @@
       width: 34.875rem; // this width comes from the design. I therefore chose the medium breakpoint as the the smallest one that's large enough.
       background-color: $white;
       display: inline-block;
-      border-radius: 0.25rem;
       border: 1px solid $neutral-100;
-
       max-height: calc(100% - 6rem);
     }
 
