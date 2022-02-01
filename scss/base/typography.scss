@@ -156,7 +156,6 @@ code {
 /* Inline code */
 :not(pre) > code {
 	padding: 0.125em;
-	border-radius: 0.25em;
 	white-space: normal;
 	background: $neutral-100;
   color: $neutral-900;
