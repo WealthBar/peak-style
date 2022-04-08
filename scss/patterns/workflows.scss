@@ -39,7 +39,6 @@
     // please use card.modal-view class as described in layouts.scss
     .card:not(.modal-view) {
       border: none;
-      border-radius: 0;
       width: 100%;
       > footer {
         display: flex;
@@ -49,7 +48,6 @@
       }
       @media #{$screen-width-medium} {
         border: 1px solid $neutral-100;
-        border-radius: 0.25rem;
         max-width: $small-width;
         margin: 1.5rem 0;
       }

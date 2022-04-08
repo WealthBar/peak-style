@@ -18,7 +18,6 @@
 .card {
   height: auto;
   background-color: $white;
-  border-radius: 0.25rem;
   border: 1px solid $neutral-100;
 
   .card-content,
@@ -34,13 +33,11 @@
 
   &.modal-view {
     border: none;
-    border-radius: 0;
     width: 100%;
 
     @media #{$screen-max-small} { box-shadow: none; }
     @media #{$screen-width-medium} {
       border: 1px solid $neutral-100;
-      border-radius: 0.25rem;
       max-width: 36rem;
       margin: 1.5rem auto;
     }
@@ -60,7 +57,7 @@
   display: table;
   margin: 0 0 1rem;
   border-radius: 0.25rem;
-  border-left: $bg-100 0.25rem solid;
+  border-left: $primary-300 0.25rem solid;
   background-color: $bg-50;
   color: $neutral-900;
   &.neg {
